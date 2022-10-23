@@ -12,7 +12,8 @@ int main()
     *dnf = dnf_exchange(*dnf);
     cout << "dd373: " << *dd373 << endl;
     cout << "dnf: " << *dnf << endl;
-    delete dd373,dnf;
+    delete dd373;
+    delete dnf;
     system("pause");
     return 0;
 }
