@@ -8,3 +8,5 @@
 *.exe
 # 忽略本地vscode配置
 /.vscode
+# 忽略mac的奇怪文件
+.DS_Store
