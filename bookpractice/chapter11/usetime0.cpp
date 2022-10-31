@@ -1,7 +1,7 @@
 // using the first draft of the Time class
 // compile usetime0.cpp and mytime0.cpp together
 #include <iostream>
-#include "mytimeo.h"
+#include "mytime0.h"
 int main()
 {
     using std::cout;

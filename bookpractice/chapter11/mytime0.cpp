@@ -1,6 +1,6 @@
 // implementing Time methods
 #include <iostream>
-#include "mytimeo.h"
+#include "mytime0.h"
 
 Time::Time()
 {
