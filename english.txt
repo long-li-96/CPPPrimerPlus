@@ -1,0 +1,122 @@
+statement:声明
+sentence:句子
+repeat:重复
+grammarly:语法学
+localization:本地化
+excuse:原谅
+slight:微小的
+confusion:混乱
+operator:操作
+logical:逻辑的
+trash:毁坏
+instruction:命令
+anyway:不管怎样
+awareness:意识
+quotient:商
+terminate:终止
+negative:消极的 负数
+qualify:符合
+race:比赛
+mud tug of war:泥浆拔河
+master:掌握
+canoe:皮划艇
+joust:竞争
+reformat:改进
+apparently:显然
+digit:数字
+punctuation:标点符号
+letter:字母
+conditional:条件的
+comfort :使舒适
+alibi:托辞
+lip ：嘴唇
+nail:指甲
+violet；蓝紫色
+indigo；靛蓝色
+automobile:汽车
+precision:精确
+handle： 处理
+mismatch:错配
+process:处理
+reach:到达
+donation:捐赠
+carnivore:食肉动物
+grand: 宏大的，n 一千美元
+patrons: 资助者
+volume: 体积
+cube: 立方
+probability：可能性
+implementation：执行,实现 [ˌɪmpləmɛnˈteɪʃənz] 
+correctly：正确地
+odds：几率
+prototype：原型
+preceding：在...之前
+type cast: 类型转换 
+propertise:财产,房地产
+revaluation:再评价
+factor: 因素，倍数
+coordinates: 坐标系
+horizontal: 水平的  [ˌhɔːrɪˈzɑːntl]
+vertical：垂直的
+slick:取巧的
+rectangular: 矩形的 [rekˈtæŋɡjələr]
+polar:极线 
+convert:转换 
+seasons:季节 [ˈsiːznz]
+expense: 开支  [ɪkˈspens]
+fall:v落下 n秋天
+recursion: 递归  [rɪˈkɜːrʒn] recursive：递归的
+strategy：策略  [ˈstrætədʒi]
+subdivide:再分
+estimate:v估算ˈestɪmət n  ˈestɪmeɪt
+various:各种各样的[ˈveriəs] 
+notations:符号
+signature:签名[ˈsɪɡnətʃər]
+deduction:推理 [dɪˈdʌkʃn]
+deprecated:已弃用[ˈdeprəkeɪtɪd]
+represent：代表[ˌreprɪˈzent] 
+encounter：遭遇 [ɪnˈkaʊntər]
+reference: v/n 参考  [ˈrefrəns] 
+swap: n/v 交换
+evaluate: 评估 [ɪˈvæljueɪt]
+temporary: 短暂的 [ˈtempəreri] 
+accumulate: 积累  [əˈkjuːmjəleɪt] 
+partial:部分的 [ˈpɑːrʃl] 
+initialization: n 初始化 [ɪˌnɪʃələˈzeɪʃn]
+digits: n 数位  [ˈdɪdʒɪts] 
+explicit: adj 明确的  [ɪkˈsplɪsɪt]
+specialization: n 专业化  [ˌspeʃ(ə)lɪ'zeɪʃ(ə)n]
+override: vt 推翻
+instantiation: n 实例化 [ɪnˌstænʃiˈeɪʃən]
+implicit: adj 隐式的 [ɪmˈplɪsɪt] 
+scope: n范围 vt 仔细看 [skoʊp]
+illustrate: v 解释 [ˈɪləstreɪtɪŋ]
+external:adj 外部的[ɪkˈstɜːrnl]
+compile: vt 编译 [kəmˈpaɪl]
+linkage: n 连接  [ˈlɪŋkɪdʒ]
+dispose: vt 处置 [dɪˈspoʊz]
+chunk: n 大块  [tʃʌŋk]
+heap:n 堆 [hiːp]
+interactive: 互动的
+solicits: v 请求
+handicap: n 残疾，障碍
+reminder: n 提醒 [rɪˈmaɪndər]
+remaining: adj 剩下的[rɪˈmeɪnɪŋ]
+gathers:v 收集  [ˈɡæðərz] 
+quarters:n 四分之一,季度  [ˈkwɔːrtərz]
+interactively: adv 交互式地 [ˌɪntərˈæktɪv]
+semicolon: n 分号  [ˈsemikoʊlən] 
+implement: v  使生效 [ˈɪmplɪment] 
+abort: v 中止  [əˈbɔːrt]
+transaction: n 交易  [trænˈzækʃn]
+constructor: n 构造函数  [kənˈstrʌktər] 
+destructor: n 析构函数   [dɪˈstrʌktər]
+verbose: adj 冗长的  [vɜːrˈboʊs] 
+augmented: adj 扩张的  [ɔːɡˈmentɪd] 
+customize: v 订制  [ˈkʌstəmaɪzd] 
+stack: n 堆栈  [stæk] 
+formal: adj 正式的  [ˈfɔːrml]
+format: vt 格式化  [ˈfɔːrmæt]
+previous: adj 以前的  [ˈpriːviəs] 
+revenue: n 收入  [ˈrevənuː]
+invoking: v 调用  [ɪnˈvoʊkɪŋ]
