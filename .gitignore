@@ -10,3 +10,4 @@
 /.vscode
 # 忽略mac的奇怪文件
 .DS_Store
+.gitignore
