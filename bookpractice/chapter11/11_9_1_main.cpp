@@ -48,7 +48,7 @@ int main()
         result.polar_mode();
         outFile << " or\n";
         outFile << result << endl;
-        outFile << "Average oubward distance per step = "
+        outFile << "Average outward distance per step = "
              << result.magval() / steps << endl;
         steps = 0;
         result.reset(0.0, 0.0);

@@ -33,7 +33,7 @@ int main()
         cout << result << endl;
         result.polar_mode();
         cout << " or\n" << result << endl;
-        cout << "Average oubward distance per step = "
+        cout << "Average outward distance per step = "
              << result.magval() / steps << endl;
         steps = 0;
         result.reset(0.0, 0.0);
