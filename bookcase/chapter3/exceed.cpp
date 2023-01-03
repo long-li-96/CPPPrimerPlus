@@ -5,7 +5,7 @@
 int main()
 {
     using namespace std;
-    short sam = SHRT_MAX; //initialize a variable to max value
+    short sam = SHRT_MAX; // initialize a variable to max short value
     unsigned short sue = sam; // okay if variable sam already defined
 
     cout << "Sam has " << sam << " dollars and Sue has " << sue;

@@ -4,6 +4,7 @@ int main()
 {
     using namespace std;
     double * p3 = new double [3]; // space for 3 doubles
+    // new 后直接跟数据类型长度
     p3[0] = 0.2;
     p3[1] = 0.5;
     p3[2] = 0.8;

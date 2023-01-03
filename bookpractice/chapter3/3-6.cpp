@@ -1,4 +1,5 @@
 // Calculate the fuel consumption of a car
+// used goto语句
 #include <iostream>
 int main()
 {

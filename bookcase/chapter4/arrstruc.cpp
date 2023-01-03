@@ -9,7 +9,7 @@ struct inflatable
 int main()
 {
     using namespace std;
-    inflatable guests[2] =
+    inflatable guests[2] = // 初始化结构数组
     {
         {"Bambi", 0.5, 21.99},
         {"Godzilla", 2000, 565.99}

@@ -13,7 +13,7 @@ int main()
       
     name = getname(); // assign address of string to name
     cout << name << " at " << (int *) name << "\n"; // display address of name
-    delete [] name; //memory freed again
+    delete [] name; // memory freed again
     return 0;
 }
 char * getname()
