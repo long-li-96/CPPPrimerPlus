@@ -37,7 +37,7 @@ automobile:汽车
 precision:精确
 handle： 处理
 mismatch:错配
-process:处理
+process: n、vt 过程, 处理 [ˈprɑːses , prəˈses]
 reach:到达
 donation:捐赠
 carnivore:食肉动物
@@ -125,3 +125,19 @@ reverse: vt 颠倒  [rɪˈvɜːrs]
 redion: n 弧度 [ˈreɪdiən]
 generator: n 生成器 [ˈdʒenəreɪtər]
 fractional: adj 分数的 [ˈfrækʃənl]
+rear: n 队列尾部 [rɪə(r)]
+nested：n、adj 嵌套的 [ˈnestɪd]
+private: adj 私有的 [ˈpraɪvɪt]
+front: n、adj 前面 [frʌnt]
+current: adj 现在的 [ˈkɜːrənt]
+queue: n 队列 [kjuː]
+maximum: adj 最大的 [ˈmæksɪməm]
+preemptive: adj 抢先的 [priˈɛmptɪv]
+prevent: vt 防止 [prɪˈvent]
+former: adj 以前的 [ˈfɔːrmər]
+failure: n 失败 [ˈfeɪljər]
+item: n 项目 [ˈaɪtəm]
+method: n 方法 [ˈmeθəd]
+simulator: n 模拟器  [ˈsɪmjuleɪtər]
+cumulative: adj 累计的 [ˈkjuːmjəleɪtɪv] 
+turn away: 拒绝 [tɜːrn əˈweɪ] 

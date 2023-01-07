@@ -8,7 +8,7 @@ int main()
     char dessert[ArSize];
 
     cout << "Enter your name:\n";
-    cin.get(name,ArSize).get(); // read string, newline
+    cin.get(name,ArSize).get(); // read string, newline 消除换行的影响
     cout << "Enter your favorite dessert:\n";
     cin.get(dessert,ArSize).get();
     cout << "I have some delicious " << dessert;

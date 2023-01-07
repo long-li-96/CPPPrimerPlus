@@ -13,7 +13,7 @@ int main()
       
     name = getname(); // assign address of string to name
     cout << name << " at " << (int *) name << "\n"; // display address of name
-    delete [] name; // memory freed again
+    delete [] name; // memory freed again 删除数组的连续内存
     return 0;
 }
 char * getname()
@@ -21,7 +21,7 @@ char * getname()
     char temp[80]; // temporary storage 暂时存储
     cout << "Enter last name: ";
     cin >> temp;
-    char * pn = new char[strlen(temp) + 1];
+    char * pn = new char[strlen(temp) + 1]; // 将指针初始化指向新开辟的字符串大小的内存
     strcpy(pn, temp); // copy string into smaller space 不检查改内存块是否能容纳
 
     return pn; // temp lost when functiion ends
