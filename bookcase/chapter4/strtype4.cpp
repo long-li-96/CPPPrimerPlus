@@ -16,7 +16,7 @@ int main()
     cin.getline(charr, 20); // indicate maximum length
     cout << "You entered: " << charr << endl;
     cout << "Enter another line of text:\n";
-    getline(cin, str); // cin now an argument; no length specifier
+    getline(cin, str); // cin now an argument; no length specifier string的输入方法
     cout << "You entered: " << str << endl;
     cout << "Length of string in charr after input: "
          << strlen(charr) << endl;

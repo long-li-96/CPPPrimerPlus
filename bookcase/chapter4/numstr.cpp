@@ -6,7 +6,7 @@ int main()
     cout << "What year was your houst built?\n";
     int year;
     cin >> year;
-    cin.get();
+    cin.get(); // 捕获换行,防止影响下次输入
     cout << "What is its street address?\n";
     char address[80];
     //cin >> address;

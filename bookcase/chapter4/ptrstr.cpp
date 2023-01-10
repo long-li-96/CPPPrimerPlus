@@ -5,6 +5,7 @@ int main()
 {
     using namespace std;
     char animal[20] = "bear";
+    // 初始化一个不可变的指针变量
     const char * bird = "wren"; // bird holds address of string, can use "wren" but not modify its value
     char * ps; // uninitialized
     cout << animal << " and " ;
@@ -21,7 +22,7 @@ int main()
     cout << animal << " at " << (int *) animal << endl; // cout display pointer's address except strings
     cout << ps << " at " << (int *) ps << endl;
 
-    ps = new char[strlen(animal) + 1]; 
+    ps = new char[strlen(animal) + 1]; // 为指针分配内存并赋值这段内存的初始地址
     strcpy(ps,animal);  // copy string to new storage
     cout << "After using strcpy(): \n";
     cout << animal << " at " << (int *) animal << endl;

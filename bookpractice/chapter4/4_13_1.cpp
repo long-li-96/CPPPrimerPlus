@@ -14,7 +14,7 @@ int main()
     cout << "What is your first name?" << endl;
     cin.getline(bsy->first_name,20);
     cout << "What is your last name?" << endl;
-    (cin >> bsy->last_name).get();
+    (cin >> bsy->last_name).get(); // 接收并消除换行符
     cout << "What letter grade do you deserve?" << endl;
     cin >> letter_grade;
     cout << "What is your age?" << endl;

@@ -9,7 +9,7 @@ struct inflatable
 int main()
 {
     using namespace std;
-    inflatable * ps = new inflatable; // allot memory for structure
+    inflatable * ps = new inflatable; // allot memory for structure，为px开辟内存
     cout << "Enter name of inflatable item: ";
     cin.get(ps->name,20); // method 1 for member access
     cout << "Enter volume in cubic feet: ";

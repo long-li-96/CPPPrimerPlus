@@ -16,7 +16,7 @@ int main()
 
     // appending for string objects and character arrays
     str1 += " paste";               // add paste to end of str1
-    strcat(charr1, " juice");       // add juice to end of charr1;
+    strcat(charr1, " juice");       // add juice to end of charr1;追加字符串
 
     // finding the length of a string object and a C-style string
     int len1 = str1.size();         // obtain length of str1

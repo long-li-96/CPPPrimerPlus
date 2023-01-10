@@ -21,7 +21,7 @@ int main()
     {
         cout << i + 1 << ": ";
         cin.get(temp, Maxlen);
-        while (cin && cin.get() != '\n')
+        while (cin && cin.get() != '\n') // 过滤掉换行符
             continue;
         if (!cin || temp[0] == '\0') // empty line?
             break;  // i not incremented
