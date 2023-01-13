@@ -9,9 +9,9 @@ int main()
     string str;
 
     cout << "Length of string in charr before input:"
-         << strlen(charr) << endl;
+         << strlen(charr) << endl; // std::strlen in cstring
     cout << "Length of string in str before input:"
-         << str.size() << endl;
+         << str.size() << endl; // string方法得到字符数
     cout << "Enter a line of text:\n";
     cin.getline(charr, 20); // indicate maximum length
     cout << "You entered: " << charr << endl;
@@ -22,6 +22,8 @@ int main()
          << strlen(charr) << endl;
     cout << "Length of string in str after input: "
          << str.size() << endl;
-    cout << R"(Jim "King" Tutt uses "\n" instead of endl. )" << '\n';
+     // mac上编译目前必须 g++ -std=c++11 file.cpp -o program
+     char * cout_str = R"(Jim "King" Try uses "\n" instead of endl. )";
+    cout << cout_str << "\n";
     return 0;
 }

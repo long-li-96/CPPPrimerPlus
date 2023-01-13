@@ -4,7 +4,7 @@
 using std::cin;
 using std::cout;
 
-// initializing statice class member
+// initializing static class member
 int String::num_strings = 0;
 
 // static method
