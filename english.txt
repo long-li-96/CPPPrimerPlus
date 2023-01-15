@@ -14,7 +14,7 @@ anyway:不管怎样
 awareness:意识
 quotient:商
 terminate:终止
-negative:消极的 负数
+negative:消极的 负数 [ˈneɡətɪv] 
 qualify:符合
 race:比赛
 mud tug of war:泥浆拔河
@@ -142,3 +142,4 @@ simulator: n 模拟器  [ˈsɪmjuleɪtər]
 cumulative: adj 累计的 [ˈkjuːmjəleɪtɪv] 
 turn away: 拒绝 [tɜːrn əˈweɪ] 
 infinity: n 无穷大  [ɪnˈfɪnəti]
+purchase: n,vt 购买 [ˈpɜːrtʃəs] 
