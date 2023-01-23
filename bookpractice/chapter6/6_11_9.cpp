@@ -14,7 +14,7 @@ int main()
     double payment;
     cout << "Enter name of the file: " << endl;
     // 打开文件，读取文件
-    getline(cin,filename);
+    getline(cin, filename);
     ifstream inFile;
     inFile.open(filename);
     if (!inFile.is_open())
@@ -28,6 +28,7 @@ int main()
     contribution * contributions = new contribution [num]; //动态分配结构数组的指针
     for (int i = 0;i<num; i++)
     {
+        // infile, 等价于cin对象，string用getline(cin, string)
         getline(inFile,(contributions+i)->name); //读取一行字符,不要用infile.getline()来混合读取数字、字符串
         inFile >> (contributions+i)->payment;
         inFile.get();

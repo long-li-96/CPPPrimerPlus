@@ -18,7 +18,7 @@ int main()
         "December"
     };
     int sales_volume[12],sum=0;
-    for (int i = 0;i < 12;i++)
+    for (int i = 0; i < 12; i ++)
     {
         cout << "Please enter sales volume of " << month[i] << ": ";
         cin >> sales_volume[i];

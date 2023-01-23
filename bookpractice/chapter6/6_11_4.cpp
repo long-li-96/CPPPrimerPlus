@@ -20,7 +20,7 @@ int main()
          << "a. display by name  " << "b. display by title" <<endl
          << "c. display by bopname  " << "d. display by preference" << endl
          << "q. quit" <<endl;
-    while (cin>> ch)
+    while (cin >> ch)
     {
         cin.clear();
         if (ch == 'q')

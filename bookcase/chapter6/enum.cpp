@@ -1,14 +1,14 @@
 #include <iostream>
 // created named constants for 0-6
 enum {red, orange, yellow, green, blue, violet, indigo};
-
+// enum中非数字在比较时会转化为数字
 int main()
 {
     using namespace std;
     cout << "Enter color code (0-6): ";
     int code;
     cin >> code;
-    while(code>=red&&code <= indigo)
+    while(code >= red && code <= indigo)
     {
         switch(code)
         {

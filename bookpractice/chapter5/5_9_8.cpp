@@ -7,7 +7,7 @@ int main()
     int sum = 0;
     cout << "Enter words (to stop, type the word done):" << endl;
     cin >> str;
-    while (strcmp(str,"done")!=0)
+    while (strcmp(str, "done") != 0) // str与done不相等时
     {
         sum += 1;
         cin >> str;

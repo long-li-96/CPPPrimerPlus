@@ -2,9 +2,9 @@
 #include <iostream>
 #include <string>
 using namespace std;
-string version1(const string & s1,const string & s2);
-const string & version2(string & s1,const string &s2); // has side effect
-const string & version3(string & s1,const string & s2);// bad design
+string version1(const string & s1, const string & s2);
+const string & version2(string & s1, const string &s2); // has side effect
+const string & version3(string & s1, const string & s2);// bad design
 
 int main()
 {
@@ -14,21 +14,24 @@ int main()
 
     cout << "Enter a string: ";
     getline(cin,input);
-    copy = input;
+    copy = input; // string 是一个标准类，赋值是重新生成了一个新对象
     cout << "Your string as entered: " << input << endl;
     result = version1(input,"***");
     cout << "Your string enhanced: " << result << endl;
     cout << "Your original string: " << input << endl;
+    cout << "Your string copied: " << copy << endl;
 
     result = version2(input,"@##");
     cout << "Your string enhanced: " << result << endl;
     cout << "Your original string: " << input << endl;
+    cout << "Your string copied: " << copy << endl;
 
     cout << "Resetting original string.\n";
     input = copy;
     result = version3(input,"@@@");
     cout << "Your string enhanced: " << result << endl;
     cout << "Your original string: " << input << endl;
+    cout << "Your string copied: " << copy << endl;
 
     return 0;
 }

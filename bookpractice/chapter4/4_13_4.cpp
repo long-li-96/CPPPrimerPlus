@@ -9,7 +9,7 @@ int main()
     cout << "Enter your last name: ";
     getline(cin,lastname);
     firstname += ", ";
-    completename = firstname + lastname;
+    completename = firstname + lastname; // string可以直接相加，char * 不行
     cout << "Here's the information in a single string: " << completename;
     return 0; 
 }

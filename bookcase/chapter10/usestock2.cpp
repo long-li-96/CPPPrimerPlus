@@ -22,10 +22,10 @@ int main()
             stocks[st].show();
         
         // set pointer to first element
-        const Stock * top = &stocks[0];
-        for (st = 1;st<STKS;st++)
+        const Stock * top = & stocks[0];
+        for (st = 1; st < STKS; st ++)
             top = &top->topval(stocks[st]);
-        
+            // top = top.topval(stocks[st])
         // now top points to the most valuable holding
         std::cout << "\n Most valuable holding:\n";
         top->show();

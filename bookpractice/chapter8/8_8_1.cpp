@@ -13,7 +13,7 @@ int main()
     char str[Size];
     cout << "Please enter a string: ";
     cin.get(str,Size);
-    for (int i = 0;i<5;i++)
+    for (int i = 0;i < 5; i ++)
     {
         cout << "When i = " << i << ":\n";
         print_str(str,i);

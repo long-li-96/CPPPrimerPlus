@@ -11,7 +11,7 @@ struct free_throws
 
 void display(const free_throws & ft);
 void set_pc(free_throws & ft);
-free_throws & accumulate(free_throws & target,const free_throws & source);
+free_throws & accumulate(free_throws & target, const free_throws & source); // 返回target的引用
 
 int main()
 {
@@ -27,7 +27,7 @@ int main()
 
     set_pc(one);
     display(one);
-    accumulate(team,one);
+    accumulate(team, one);
     display(team);
     // use return value as argument
     display(accumulate(team,two));

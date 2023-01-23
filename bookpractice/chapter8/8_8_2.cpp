@@ -7,8 +7,8 @@ struct CandyBar
     double weight;
     int heat;
 };
-void fill(CandyBar & candy,const char * name = "Millennium Munch",
-          double weight = 2.85,int heat = 350);
+void fill(CandyBar & candy, const char * name = "Millennium Munch",
+          double weight = 2.85, int heat = 350);
 void show(const CandyBar & candy);
 
 int main()
@@ -22,7 +22,7 @@ int main()
     return 0;
 }
 
-void fill(CandyBar & candy,const char * name,double weight,int heat)
+void fill(CandyBar & candy, const char * name, double weight, int heat)
 {
     int i = 0;
     while(name[i] && i < Size-1)

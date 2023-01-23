@@ -28,24 +28,24 @@ int main()
     int hours; // hours of simulator
     cin >> hours;
     // simulation will run 1 cycle per minute
-    long cyclelimit = MIN_PER_HR * hours; // # of cycles
+    long cyclelimit = MIN_PER_HR * hours; // # of cycles, 用来判断每分钟是否有新用户
 
     cout << "Enter the average number of customers per hour: ";
     double perhour; // average # of arrival per hour
     cin >> perhour; 
     double min_per_cust; // average time between arrivals
-    min_per_cust = MIN_PER_HR / perhour;
+    min_per_cust = MIN_PER_HR / perhour; // 每几分钟一个用户
 
     Item temp; // new customer data
     long turnaways = 0; // turned away by full queue
     long customers = 0; // joined the queue
     long served = 0; // served during the simulation
     long sum_line = 0; // cumulative line length
-    int wait_time = 0; // time until autoteller is free
+    int wait_time = 0; // time until autoteller is free 队伍第一个用户等待进入交易的时间
     long line_wait = 0; // cumulative time in line
 
-    // running the simulation
-    for (int cycle = 0; cycle < cyclelimit; cycle ++)
+    // running the simulation 每分钟一次循环
+    for (int cycle = 0; cycle < cyclelimit; cycle ++) 
     {
         if (newcustomer(min_per_cust)) // have newcomer
         {
@@ -54,20 +54,20 @@ int main()
             else
             {
                 customers++;
-                temp.set(cycle); // cycle = time of arrival
+                temp.set(cycle); // cycle = time of arrival 设置到达时间、交易时间
                 line.enqueue(temp); // add newcomer to line
             }
         }
-        if (wait_time <= 0 && !line.isempty())
+        if (wait_time <= 0 && !line.isempty()) // 不用等并且队伍非空的情况，踢出一个用户:队伍只有这个新加入的用户
         {
             line.dequeue(temp); // attend next customer
-            wait_time = temp.ptime(); // for wait_time minutes
-            line_wait += cycle - temp.when();
+            wait_time = temp.ptime(); // for wait_time minutes 队伍接下来的等待时间就是这个用户的交易时间
+            line_wait += cycle - temp.when(); // 队伍总等待时长等于每个人的等待时间之和
             served++;
         }
         if (wait_time > 0)
-            wait_time --;
-        sum_line += line.queuecount();
+            wait_time --; // 如果atm正在处理，那每次循环就等atm的时间减1分钟
+        sum_line += line.queuecount(); // 有问题，怎么会每分钟加一次队伍当前人数
     }
 
     // reporting results

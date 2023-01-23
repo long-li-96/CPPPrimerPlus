@@ -43,6 +43,6 @@ void report()
 void comfort()
 {
     cout << "Your employees think you are the finest CEO\n"
-            "int the industry. The board of directors think\n"
+            "in the industry. The board of directors think\n"
             "you are the finest CEO in the industry. \n";
 }

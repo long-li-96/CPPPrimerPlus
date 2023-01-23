@@ -4,11 +4,11 @@
 int main()
 {
     using namespace std;
-    int vowels_num=0,consonants_num = 0,others_num = 0;
+    int vowels_num=0, consonants_num = 0, others_num = 0;
     char word[50];
     cout << "Enter words (q to quit): " << endl;
     cin >> word;
-    while (strcmp(word,"q")) //同为字符串才能比较,相同为0即false,不同非0即为True
+    while (strcmp(word,"q")) // 同为字符串才能比较,相同为0即false,不同非0即为True,挨个对字符进行减法(ASCII码)
     {
         if (isalpha(word[0]))
         {

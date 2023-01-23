@@ -51,7 +51,7 @@ void Stock::sell(long num, double price)
     using std::cout;
     if (num < 0)
     {
-        cout << "Number of shares sold can't be nagetive. "
+        cout << "Number of shares sold can't be negative. "
              << "Transaction is aborted.\n";
     }
     else if (num > shares)

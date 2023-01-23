@@ -22,5 +22,5 @@ namespace debts
     };
     void getDebt(Debt &);
     void showDebt(const Debt &);
-    double sumDebts(const Debt ar[],int n);
+    double sumDebt(const Debt ar[],int n);
 }

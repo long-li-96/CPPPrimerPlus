@@ -8,7 +8,7 @@ int main()
     double total,choices;
     cout << "Enter the total number of choices on the game card and \n"
             "the numbers of picks allowed:\n";
-    while ((cin>>total>>choices)&&choices<=total)
+    while ((cin>>total>>choices)&&choices <= total)
     {
         cout << "You have one chance in ";
         cout << probability(total,choices); // compute th odds
@@ -30,3 +30,4 @@ long double probability(unsigned numbers, unsigned picks)
         result = result * n /p;
     return result;
 }
+// 计算从total张牌中抽choices次抽中指定牌的概率

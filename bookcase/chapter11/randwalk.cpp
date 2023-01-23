@@ -24,14 +24,14 @@ int main()
         while (result.magval() < target)
         {
             direction = rand() % 360;
-            step.reset(dstep, direction, Vector::POL);
-            result = result + step;
-            steps++;
+            step.reset(dstep, direction, Vector::POL); // 转换成POL,并赋值
+            result = result + step; // 
+            steps ++;
         }
         cout << "After " << steps << " steps, the subject "
              << "has the following location:\n";
         cout << result << endl;
-        result.polar_mode();
+        result.polar_mode(); // 将result由默认的RECT转换成POL
         cout << " or\n" << result << endl;
         cout << "Average outward distance per step = "
              << result.magval() / steps << endl;

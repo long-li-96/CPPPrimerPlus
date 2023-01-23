@@ -1,6 +1,6 @@
 // functions with a structure argument
 #include <iostream>
-#include <cmath>
+#include <cmath> // atan2()
 
 // structure declarations
 struct polar

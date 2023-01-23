@@ -3,12 +3,12 @@ int main()
 {
     golf gol[5];
 
-    for (int i = 0;i<5;i++)
+    for (int i = 0; i < 5; i ++)
     {
         char name[Len];
         int hc;
         int result = 1;
-        if (i%2 == 0)
+        if (i % 2 == 0)
         {
             result = setgolf(gol[i]);
         }
@@ -19,8 +19,8 @@ int main()
             std::cout << "Please enter hc: ";
             std::cin >> hc;
             std::cin.get();
-            setgolf(gol[i],name,hc);
-            if (strcmp(name,"") == 0)
+            setgolf(gol[i], name, hc);
+            if (strcmp(name,"") == 0) // result的默认值就是1
                 result = 0;
         }
         if (result == 0)

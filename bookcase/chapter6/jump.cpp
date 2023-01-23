@@ -8,10 +8,10 @@ int main()
     int spaces = 0;
 
     cout << "Enter a line of text:\n";
-    cin.get(line,ArSize);
+    cin.get(line,ArSize); // cin接收指定长度字符
     cout << "Complete line:\n" << line << endl;
     cout << "Line through first period:\n";
-    for (int i = 0; line[i]!='\0';i++)
+    for (int i = 0; line[i] != '\0';i++)
     {
         cout << line[i];
         if (line[i]=='.')

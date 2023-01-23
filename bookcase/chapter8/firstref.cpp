@@ -12,7 +12,7 @@ int main()
     cout << ",rodents = " << rodents << endl;
     // some implementations required type casting the following
     // address to type unsigned
-    cout << "rats address = " << &rats;
-    cout << ",rodents address = " << &rodents << endl;
+    cout << "rats address = " << & rats;
+    cout << ",rodents address = " << & rodents << endl;
     return 0;
 }

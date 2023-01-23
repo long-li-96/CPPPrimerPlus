@@ -18,7 +18,7 @@ int main()
     taft.show_lbs();
 
     incognito = 276.8; // uses comstructor for conversion
-    taft = 325; // same as taft = Stonewt(325)
+    taft = 325; // same as taft = Stonewt(325) 隐式转换
     cout << "After dinner, the celebrity weighed ";
     incognito.show_stn();
     cout << "After dinner, the Preddident weighed ";
@@ -26,14 +26,14 @@ int main()
 
     display(taft, 2);
     cout << "The wrestler weighed even more.\n";
-    display(422, 2);
+    display(422, 2); // 隐式转换
     cout << "No stone left unearned\n";
     return 0;
 }
 
 void display(const Stonewt & st, int n)
 {
-    for (int i = 0; i< n; i++)
+    for (int i = 0; i < n; i ++)
     {
         cout << "Wow! ";
         st.show_stn();

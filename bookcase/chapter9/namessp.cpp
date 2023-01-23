@@ -30,7 +30,7 @@ void other(void)
     for (i = 0;i<3;i++)
         showDebt(zippy[i]);
 
-    cout << "Total debt: $" << sumDebts(zippy,3) << endl;
+    cout << "Total debt: $" << sumDebt(zippy,3) << endl;
     return;
 }
 

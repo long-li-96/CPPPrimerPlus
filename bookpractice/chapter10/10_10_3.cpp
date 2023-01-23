@@ -22,7 +22,7 @@ int Golf::setgolf()
     cout << "Please enter handicap:";
     cin >> hc_temp;
     cin.get();
-    *this = Golf(fullname_temp,hc_temp);
+    *this = Golf(fullname_temp, hc_temp);
     return 1;
 }
 

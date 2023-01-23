@@ -12,7 +12,7 @@ Queue::Queue(int qs) : qsize(qs)
 Queue::~Queue()
 {
     Node * temp;
-    while (front != NULL)
+    while (front != NULL) // 将front指针赋值给temp，front重置为next，释放掉temp指向的内存
     {
         temp = front; // save address of front item
         front = front->next; // reset pointer to next item

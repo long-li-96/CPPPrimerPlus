@@ -7,7 +7,7 @@ int main()
     cout << "Please enter one of the following choices: " << endl 
          << "c) carnivore" << "  p) pianist" << endl
          << "t) tree" << "  g) game" << endl;
-    while(cin.getline(ch,2)&&true)
+    while(cin.get(ch) && true)
     {
         switch(ch)
         {
@@ -21,7 +21,7 @@ int main()
                       break;
             default:
             cin.clear();
-            while(cin.get() != '\n')
+            while(cin.get() != '\n') // 读取缓冲区所有输入，直到遇到换行符
                 continue;
             cout << "Please enter c,p,t or g: ";
         }

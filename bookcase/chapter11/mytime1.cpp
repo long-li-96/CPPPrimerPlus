@@ -35,7 +35,7 @@ Time Time::operator+(const Time & t) const
 {
     Time sum;
     sum.minutes = minutes + t.minutes;
-    sum.hours = hours + t.hours + sum.minutes/60;
+    sum.hours = hours + t.hours + sum.minutes / 60;
     sum.minutes %= 60;
     return sum;
 }

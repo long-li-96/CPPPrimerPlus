@@ -11,7 +11,7 @@ class Person
         char fname[LIMIT];
     public:
         Person() {lname = ""; fname[0] = '\0';}
-        Person(const std::string & ln, const char * fn = "Heyyou");
+        Person(const std::string & ln, const char * fn = "Heyyou"); // 构造函数给默认值
         void Show() const;
         void FormalShow() const;
 };

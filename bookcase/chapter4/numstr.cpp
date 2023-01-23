@@ -16,3 +16,4 @@ int main()
     cout << "Done!\n";
     return 0;
 }
+// cin根据换行符判读字符串是否结束，不包括数字

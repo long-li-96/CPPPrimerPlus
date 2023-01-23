@@ -17,7 +17,7 @@ int main()
         Stonewt(0.5)
     };
     double lbs;
-    for (int i = 0;i < 3;i++)
+    for (int i = 0; i < 3; i ++)
     {
         cout << "Enter the " << i + 4
         << "stonewt" << endl;
@@ -61,7 +61,6 @@ Stonewt min_stonewts(const Stonewt * s, int num)
 int judge_stonewts(const Stonewt * s, int num, const Stonewt & c)
 {
     //int total_num = sizeof(*s);
-    Stonewt ar[num];
     int j = 0;
     for (int i = 0; i < num; i ++)
     {

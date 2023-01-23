@@ -1,7 +1,7 @@
 // for 9_6_1.cpp
 #include <iostream>
 #include <cstring>
-const int Len = 40;
+const int Len = 40; // 声明一个常量
 struct golf
 {
     char fullname[Len];
@@ -11,7 +11,7 @@ struct golf
 // non-interactive version:
 // function sets golf structure to provided name,handicap
 // using values passed as arguments to the function
-void setgolf(golf & g,const char * name,int hc);
+void setgolf(golf & g, const char * name, int hc);
 
 // interactive version:
 // function solicits name and handicap from user

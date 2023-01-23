@@ -20,5 +20,8 @@ int main()
     
     cout << "bunnies address = " << &bunnies;
     cout << ",rodents address = " << &rodents << endl;
+
     return 0;
 }
+
+// 引用只能在声明时初始化，不能赋值，引用一旦初始化指向某个变量，便会一直绑定这个变量，无法改变

@@ -7,7 +7,7 @@ struct travel_time
 };
 const int Mins_per_hr = 60;
 
-travel_time sum(travel_time t1,travel_time t2);
+travel_time sum(travel_time t1, travel_time t2);
 void show_time(travel_time t);
 
 int main()

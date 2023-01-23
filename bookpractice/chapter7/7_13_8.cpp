@@ -38,7 +38,7 @@
 #include <iostream>
 using namespace std;
 const int Seasons = 4;
-const char * Snames[Seasons] = {"Spring","Summer","Fall","Winter"};
+const char * Snames[Seasons] = {"Spring","Summer","Fall","Winter"}; // 字符指针数组才能在一个数组中放多个字符串（指针）
 struct Seasons_Expenses{
     double expenses[Seasons];
 };
@@ -52,9 +52,9 @@ int main()
     show(&a,Seasons);
     return 0;
 }
-void fill(Seasons_Expenses * a,int num)
+void fill(Seasons_Expenses * a, int num) // 直接改变了原有指针指向的数据
 {
-    for (int i = 0;i<num;i++)
+    for (int i = 0; i<num; i++)
     {
         cout << "Enter " << *(Snames+i) << " expenses: ";
         cin >> a->expenses[i];
@@ -64,7 +64,7 @@ void show(const Seasons_Expenses * a,int num)
 {
     double total = 0.0;
     cout << "\nEXPENSES\n";
-    for (int i = 0;i < num; i++)
+    for (int i = 0; i < num; i++)
     {
         cout << *(Snames+i) << ": $" << a->expenses[i] << endl;
         total += a->expenses[i];

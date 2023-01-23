@@ -1,10 +1,10 @@
 #include <iostream>
 
 template <typename T> // template A
-T SumArray(T arr[],int n);
+T SumArray(T arr[], int n);
 
 template <typename T> // template B
-T SumArray(T * arr[],int n);
+T SumArray(T * arr[], int n);
 
 struct debts
 {
@@ -22,10 +22,10 @@ int main()
         {"Ura Foxe",1300.0},
         {"Tby Stout",1800.0}
     };
-    double * pd[3];
+    double * pd[3]; // 指针数组
 
 // set pointers to the amount of the structures in mr_E
-    for (int i = 0;i<3;i++)
+    for (int i = 0; i < 3; i ++)
         pd[i] = &(mr_E[i].amount);
     
     cout << "The summary of things is: " << SumArray(things,6)

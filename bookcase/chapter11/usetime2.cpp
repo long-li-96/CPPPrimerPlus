@@ -1,4 +1,4 @@
-// using the third draft of the Time class
+  // using the third draft of the Time class
 // compile usetime2.cpp and mytime2.cpp together
 #include <iostream>
 #include "mytime2.h"

@@ -8,6 +8,6 @@ int main()
     cin >> f;
     for (int i = k; i <= f; i++)
         sum += i;
-    cout << k << "-" << f << "之间所有整数的和为：" << sum;
+    cout << k << "-" << f << " aggregate is " << sum;
     return 0;
 }

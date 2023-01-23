@@ -13,8 +13,7 @@ int main()
     while( cin >> ch && toupper(ch) != 'Q')
     {
         while (cin.get() != '\n')
-            continue; // 检测是否输入换行来结束换行，没有则继续输入，有则进入
-                      // 下一步代码
+            continue; // 直到cin获取到缓冲区的换行符, 捕获缓冲区中的剩余字符
         if (!isalpha(ch))
         {
             cout << "\a";
@@ -22,7 +21,7 @@ int main()
         }
         switch (ch)
         {
-            case 'A':
+            case 'A': // 没有break，执行下一步代码
             case 'a': cout << "Enter a PO number to add: ";
                       cin >> po;
                       if (st.isfull())

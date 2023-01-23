@@ -23,7 +23,7 @@ int main()
     cout << ps << " at " << (int *) ps << endl;
 
     ps = new char[strlen(animal) + 1]; // 为指针分配内存并赋值这段内存的初始地址
-    strcpy(ps,animal);  // copy string to new storage
+    strcpy(ps, animal);  // copy string to new storage
     cout << "After using strcpy(): \n";
     cout << animal << " at " << (int *) animal << endl;
     cout << ps << " at " << (int *) ps << endl;

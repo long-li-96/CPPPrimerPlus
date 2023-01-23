@@ -15,5 +15,5 @@
  }
  double avg_reciprocal(double x,double y)
  {
-     return 2.0*x*y/(x+y);
+     return 2.0 * x * y/ (x + y);
  }

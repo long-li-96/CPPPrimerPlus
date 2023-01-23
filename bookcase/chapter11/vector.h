@@ -34,7 +34,7 @@ namespace VECTOR
         // operator overloading
             Vector operator+(const Vector & b) const;
             Vector operator-(const Vector & b) const;
-            Vector operator-() const;
+            Vector operator-() const; // 只有本身这个对象一个参数
             Vector operator*(double n) const;
         // friends
             friend Vector operator*(double n, const Vector & a);

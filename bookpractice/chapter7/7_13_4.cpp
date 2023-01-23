@@ -17,7 +17,7 @@ long double probability(unsigned field_number1, unsigned choices, unsigned field
     long double result = 1.0;
     long double n;
     unsigned p;
-    for (n = field_number1, p = choices;p>0;n--,p--)
+    for (n = field_number1, p = choices; p>0; n--, p--)
     {
         result = result * n / p;
     }

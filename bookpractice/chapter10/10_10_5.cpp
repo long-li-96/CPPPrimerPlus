@@ -20,7 +20,7 @@ bool Stack1::push(const Item & item)
 {
     if (top < MAX)
     {
-        items[top++] = item;
+        items[top ++] = item;
         return true;
     }
     else 
@@ -34,9 +34,8 @@ bool Stack1::pop(Item & item)
     {
         sum += item.payment;
         std::cout << "An order has been processed, current revenue: " << sum << "\n";
-        item = items[--top];
+        item = items[-- top];
         return true;
-
     }
     else 
         return false;

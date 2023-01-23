@@ -15,15 +15,15 @@ int main()
     while (ch != '@')
     {
         if (isalpha(ch))
-            chars++;
+            chars ++;
         else if (isspace(ch))
-            whitespace++;
+            whitespace ++;
         else if (isdigit(ch))
-            digits++;
+            digits ++;
         else if (ispunct(ch))
-            punct++;
+            punct ++;
         else 
-            others++;
+            others ++;
         cin.get(ch);
     }
     cout << chars << " letters, "

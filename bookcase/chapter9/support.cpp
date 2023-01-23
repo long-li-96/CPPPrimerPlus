@@ -10,7 +10,7 @@ void local();
 using std::cout;
 void update(double dt) // modifies global variable
 {
-    extern double warming; // optional redeclaration
+    extern double warming; // optional redeclaration 可选的重新声明
     warming += dt; // use global warming
     cout << "Updating global warming to " << warming;
     cout << " degrees.\n";

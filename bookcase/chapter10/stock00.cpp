@@ -3,9 +3,9 @@
 #include <iostream>
 #include "stock00.h"
 
-void Stock::acquire(const std::string & co,long n, double pr)
+void Stock::acquire(const std::string & co, long n, double pr)
 {
-    company = co;
+    company = co; // 调用string类的赋值操作符方法
     if (n < 0)
     {
         std::cout << "Number of shares can't be negative; "
@@ -18,7 +18,7 @@ void Stock::acquire(const std::string & co,long n, double pr)
     set_tot();
 }
 
-void Stock::buy(long num,double price)
+void Stock::buy(long num, double price)
 {
     if (num < 0)
     {

@@ -1,7 +1,6 @@
 // example of a three-file program
 #include <iostream>
 #include "coordin.h" // structure templates, function prototypes
-#include "file2.cpp"
 using namespace std;
 int main()
 {

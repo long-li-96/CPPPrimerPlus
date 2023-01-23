@@ -1,6 +1,6 @@
 // 将函数定义拓展到头文件中
 #include "9_6_4.h"
-
+// 函数重载
 namespace SALES
 {
     void setSales(Sales & s,const double ar[],int n)
@@ -20,46 +20,52 @@ namespace SALES
         s.max = ar[0];
         s.min = ar[0];
         int i = 0;
-        for (;i<n;i++)
+        for (; i < n; i ++)
         {
             s.sales[i] = ar[i];
             sum += ar[i];
             s.max = s.max < ar[i] ? ar[i] : s.max;
             s.min = s.min > ar[i] ? ar[i] : s.min;
         }
-        s.average = sum/n;
+        s.average = sum / n;
         // 如果n < 4,则s.sales中还有元素未赋值，都赋值为0.0
         for (;i<4;i++)
         {
             s.sales[i] = 0.0;
         }
     }
-
+// 没有考虑输入异常
     void setSales(Sales & s)
     {
         std::cout << "Please enter the value of " << 1 << "st"
-        << "quarter's sales: " << std::endl;
+        << " quarter's sales: " << std::endl;
         std::cin >> s.sales[0];
         s.max = s.sales[0];
         s.min = s.sales[0];
         double sum = 0.0;
         sum += s.sales[0];
-        for (int i = 1;i<4;i++)
+        for (int i = 1; i < 4; i ++)
         {
             std::cout << "Please enter the value of " << i+1 << "st"
             << "quarter's sales: " << std::endl;
-            std::cin >> s.sales[i];
+            while (! (std::cin >> s.sales[i]))
+            {
+                std::cin.clear();
+                while (std::cin.get() != '\n')
+                    continue;
+                std::cout << "Please enter again" << std::endl;
+            }
             s.max = s.max < s.sales[i] ? s.sales[i] : s.max;
             s.min = s.min > s.sales[i] ? s.sales[i] : s.min;
             sum += s.sales[i];
         }
-        s.average = sum/4;
+        s.average = sum / 4;
     }
 
     void showSales(const Sales & s)
     {
         std::cout << "s.sales: " << std::endl;
-        for (int i = 0;i<4;i++)
+        for (int i = 0;i < 4; i ++)
             std::cout << s.sales[i];
         std::cout << std::endl;
         std::cout << s.average << "\n";

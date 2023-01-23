@@ -1,6 +1,6 @@
 // using the not operator
 #include <iostream>
-#include <climits>
+#include <climits> // 定义了INT_MAX、INT_MIN等系统常量
 bool is_int(double);
 int main()
 {
@@ -8,7 +8,7 @@ int main()
     double num;
     cout << "Yo, dude! Enter an integer value: ";
     cin >> num;
-    while (!is_int(num))
+    while (! is_int(num))
     {
         cout << "Out of range -- please try again: ";
         cin >> num;

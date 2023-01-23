@@ -28,7 +28,7 @@ int main()
     }
     if (inFile.eof())
         cout << "End of file reached.\n";
-    else if (inFile.fail())
+    else if (inFile.fail()) // while input bad
         cout << "Input terminated by data mismatch.\n";
     else 
         cout << "Input terminated for unknown reason.\n";

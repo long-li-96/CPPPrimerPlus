@@ -10,13 +10,13 @@ int main()
     int num;
     cout << "How many cars do you wish to catalog?" << endl;
     cin >> num;
-    cin.get();
+    cin.get(); // 捕获换行符
     car * cars = new car [num];
-    for (int i = 0;i<num;i++)
+    for (int i = 0; i < num; i ++)
     {   
         cout << "Car #" << i+1 << ":" << endl;
         cout << "Please enter the make: ";
-        getline(cin,(cars+i)->name);
+        getline(cin, (cars+i)->name); // string input: getline(cin, string)
         cout << "Please enter the year made: ";
         cin >> (cars+i)->year;
         cin.get();

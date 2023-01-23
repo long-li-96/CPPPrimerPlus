@@ -1,5 +1,6 @@
 #include <iostream>
 
+const int ArSize = 40;
 namespace SALES
 {
     const int QUARTERS = 4;

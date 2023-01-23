@@ -1,10 +1,10 @@
 // external variables
 // compile with support.cpp
-#include "support.cpp"
+#include "support.cpp" // 危险
 #include <iostream>
 using namespace std;
 // external variable
-double warming = 0.3; //warming defined
+double warming = 0.3; // warming defined
 // function prototypes
 void update(double dt);
 void local();

@@ -45,10 +45,10 @@ void swapp(int *p,int *q)
     *q = temp;
 }
 
-void swapv(int a,int b)
+void swapv(int a,int b) // 函数体中的变量只是复制了参数的值，是不同的对象
 {
     int temp;
     temp = a;
     a = b;
     b = temp;
-}
+} 

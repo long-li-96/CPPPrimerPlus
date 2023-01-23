@@ -18,7 +18,7 @@ class String
         String(); // default constructor
         String(const String &); // copy constructor
         ~String(); // destructor
-        int length() const {return len; } // 直接在类声明里定义的函数是内联函数
+        int length() const {return len;} // 直接在类声明里定义的函数是内联函数
 
         // overloaded operator methods
         String & operator=(const String &);

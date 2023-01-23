@@ -10,10 +10,11 @@ int main()
     using namespace std;
     using VECTOR::Vector;
     ofstream outFile; // create object for output
-    outFile.open("/Users/kali/C++PrimerPlus/CaddaddPrimerPlus/testfile/11_9_1.txt"); // associate with a file
+    char * filename = "/Users/kali/C++PrimerPlus/CaddaddPrimerPlus/testfile/11_9_1.txt";
+    outFile.open(filename); // associate with a file
     if (!outFile.is_open()) // if failed to open file, then exit
     {
-        cout << "Could not open the file " << "/Users/kali/C++PrimerPlus/CaddaddPrimerPlus/testfile/11_9_1.txt" << endl;
+        cout << "Could not open the file " << filename << endl;
         cout << "Program terminating.\n";
         exit(EXIT_FAILURE);
     }

@@ -7,7 +7,7 @@ int main()
     int sum = 0;
     cout << "Enter words (to stop, type the word done): " << endl;
     cin >> str;
-    while (str != "done")
+    while (str != "done") // string类可以直接比较
     {
         sum += 1;
         cin >> str;

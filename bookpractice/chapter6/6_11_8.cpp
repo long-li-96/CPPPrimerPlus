@@ -10,7 +10,7 @@ int main()
     getline(cin,filename);
     int count = 0;
     char value;
-    ifstream inFile;
+    ifstream inFile; // 读取文件的对象
     inFile.open(filename);
     if (!inFile.is_open())
     {

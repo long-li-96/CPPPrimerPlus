@@ -9,7 +9,7 @@ int main()
     cin.getline(firstname,20);
     cout << "Enter your last name: ";
     cin.getline(lastname,20);
-    strcat(firstname,", ");
+    strcat(firstname,", "); // connect two string
     strcat(firstname,lastname);
     strcpy(name,firstname);
     cout << "Here's the information in a single string: " << name;

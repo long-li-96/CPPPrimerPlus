@@ -6,7 +6,7 @@ int main()
     int x;
     
     cout << "The expression x = 100 has the value ";
-    cout << (x = 100) << endl;
+    cout << (x = 100) << endl; // 赋值运算符返回对象的引用，输出对象的值
     cout << "Now x = "<< x << endl;
     cout << "The expression x < 3 has the value ";
     cout << (x < 3) << endl;

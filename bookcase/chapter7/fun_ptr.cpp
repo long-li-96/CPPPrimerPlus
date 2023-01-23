@@ -3,7 +3,7 @@
 double betsy(int);
 double pam(int);
 
-void estimate(int lines,double (*pf) (int));
+void estimate(int lines,double (*pf) (int)); // 第二个参数为函数指针
 
 int main()
 {
@@ -12,9 +12,9 @@ int main()
     cout << "How many lines of code do you need? ";
     cin >> code;
     cout << "Here's Betsy's estimate: \n";
-    estimate(code,betsy);
+    estimate(code, betsy);
     cout << "Here's Pam's estimate: \n";
-    estimate(code,pam);
+    estimate(code, pam);
     return 0;
 }
 

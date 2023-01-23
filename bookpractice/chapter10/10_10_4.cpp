@@ -23,7 +23,7 @@ namespace SALES
             average = 0.0;
             max = 0.0;
             min = 0.0;
-            for (int i = 0;i < QUARTERS;i++)
+            for (int i = 0; i < QUARTERS; i ++)
                 sales[i] = 0.0;
         }
         // 确保n<=QUARTERS，Sales.sales只有QUARTERS个元素
@@ -33,7 +33,7 @@ namespace SALES
         max = ar[0];
         min = ar[0];
         int i = 0;
-        for (;i<n;i++)
+        for (; i < n; i ++) // 从ar复制数组元素值时顺带比较最大值、最小值
         {
             sales[i] = ar[i];
             sum += ar[i];
@@ -42,14 +42,14 @@ namespace SALES
         }
         average = sum/n;
         // 如果n < QUARTERS,则sales中还有元素未赋值，都赋值为0.0
-        for (;i<QUARTERS;i++)
+        for (;i < QUARTERS; i ++)
             sales[i] = 0.0;
     }
 
     void Sales::show() const
     {
         cout << "sales: " << "\n";
-        for (int i = 0;i<QUARTERS;i++)
+        for (int i = 0; i < QUARTERS; i ++)
             cout << sales[i] << " ";
         cout << "\n";
         cout << average << "\n";
@@ -61,14 +61,14 @@ namespace SALES
     {
         double ar[QUARTERS];
         int i;
-        for (i = 0; i < QUARTERS; i++)
+        for (i = 0; i < QUARTERS; i ++)
         {
-            cout << "Enter the #" << i+1 << " number: (q to quit)";
-            if (!(cin >> ar[i]))
+            cout << "Enter the #" << i + 1 << " number: (q to quit)";
+            if (!(cin >> ar[i])) // 非法输入，结束循环
                 break;
         }
-        if (i == 0)
+        if (i == 0) // 如果一次都没有输入成功
             ar[0] = 0.0;
-        *this = Sales(ar, i);
+        * this = Sales(ar, i); // 自身对象调用另一个构造函数
     }
 }

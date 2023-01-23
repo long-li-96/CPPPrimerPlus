@@ -19,7 +19,7 @@ bool Stack::push(const Item & item)
 {
     if (top < MAX)
     {
-        items[top++] = item;
+        items[top ++] = item;
         return true;
     }
     else 
@@ -30,7 +30,7 @@ bool Stack::pop(Item & item)
 {
     if (top > 0)
     {
-        item = items[--top];
+        item = items[-- top]; // 只是用item记录被推出的元素
         return true;
     }
     else 

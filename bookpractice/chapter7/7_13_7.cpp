@@ -1,17 +1,17 @@
 #include <iostream>
 using namespace std;
 const int Size = 6;
-double * Fill_array(double * begin,double * end);
-void show_array(double * begin,double * end);
+double * Fill_array(double * begin,double * end); 
+void show_array(double * const begin, double * const end);
 void revalue(double r,double * begin,double * end);
 int main()
 {
     double numbers[Size];
     double * pt = Fill_array(numbers,numbers+Size-1);
     show_array(numbers,pt);
-    if (pt != numbers) // 判断数组是否有数
+    if (pt != numbers) // 判断数组是否有数 pt一开始赋值的是数组首元素地址
     {
-        cout << "Enter  revaluation factor: ";
+        cout << "Enter revaluation factor: ";
         double factor;
         while (!(cin >> factor)) // bad input
         {
@@ -40,12 +40,12 @@ int main()
 //     }
 //     return ptr;
 // }
-double * Fill_array(double * begin,double * end)
+double * Fill_array(double * const begin, double * const end)
 {
     using namespace std;
     double temp;
-    double * ptr;
-    for (ptr = begin;ptr != end+1;ptr++)
+    double * ptr; // 新声明个指针，不改变传参进来的指针
+    for (ptr = begin; ptr != end + 1; ptr++)
     {
         cout << "Enter value #" << (ptr - begin + 1) << ": ";
         cin >> temp;
@@ -64,7 +64,8 @@ double * Fill_array(double * begin,double * end)
     }
     return ptr;
 }
-void show_array(double * begin,double * end)
+
+void show_array(double * begin, double * end)
 {
     cout << "The numbers of array: ";
     double * ptr = begin;
@@ -75,9 +76,10 @@ void show_array(double * begin,double * end)
     }
     cout << endl;
 }
+
 void revalue(double r,double * begin,double * end)
 {
-   for (double * pt =begin;pt != end;pt++)
+   for (double * pt =begin; pt != end; pt++)
    {
        (*pt) *= r;
    }

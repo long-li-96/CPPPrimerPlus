@@ -4,26 +4,33 @@
 const double * f1(const double ar[],int n);
 const double * f2(const double [],int);
 const double * f3(const double *,int);
+// 以上三种声明实际对应同样的函数定义
 int main()
 {
     using namespace std;
     double av[3] = {1112.3, 1542.6, 2227.9};
 
     // pointer to a function
-    const double *(*p1)(const double *, int) = f1;
+    const double *(*p1)(const double *, int) = f1; // *p1 = f1
+
+    // auto p2 = f2; 等价于 const double * (*p2) (const double *, int) = f2;
     auto p2 = f2; // C++11 automatic type deduction
     // pre-C++11 can use the following code instead
     // const double *(*p2) (const double *, int ) = f2;
     cout << "Using pointers to functions: \n";
     cout << " Address Value\n";
+    // f1(av, 3): *f1(av, 3)
     cout << (*p1) (av,3) << ": " << *(*p1)(av,3) << endl;
+    // f1(av, 3):f1(av, 3)，函数名即是函数地址也是指向函数的指针
     cout << p2(av,3) << ": " << *p2(av,3) << endl;
     // pa an array of pointers
     // auto doesn't work with list initialization
+    // *pa[3] 是一个指针数组(有多个指针)
     const double *(*pa[3])(const double *, int) = {f1,f2,f3};
     // but it does work for initializing to a single value
     // pb a pointer to first element of pa
-    auto pb = pa;
+    // pb :指向一个函数指针数组的指针
+    auto pb = pa;  // const double * (**pb) (const double *, int) = pa;
     // pre-C++11 can use the following code instead
     // const double * (**pb)(const double *, int) = pa; // *pb=数组名，**pb = 数组
 
@@ -36,16 +43,17 @@ int main()
     cout << "\nUsing pointers to an array of pointers:\n";
     cout << " Address Value\n";
     // easy way to declare pc
-    auto pc = &pa;
+    auto pc = &pa; // 声明并初始化pc为pa指针数组的地址，pc即指向 指针数组的指针
     // pre-C++11 can use the following code instead
     // const double *(*(pc)[3])(const double *,int) = &pa;
     cout << (*pc)[0](av,3) << ": " << *(*pc)[0](av,3) << endl;
     // hard way to declare pd
-    const double *(*(*pd)[3]) (const double *,int) = &pa;
+    const double *(*(*pd)[3]) (const double *,int) = &pa; // pd为一个指向函数指针数组的指针
     // store return value in pdb
-    const double * pdb = (*pd)[1](av,3);
-    cout << pdb << ": " << *pdb << endl;
+    const double * pdb = (*pd)[1](av,3); // (*pd)[1](av,3)返回了一个指向数组第二个元素的指针
+    cout << pdb << ": " << *pdb << endl; // pdb是指针存储了数组第二个元素的地址，*pdb取值
     // alternative notation
+    // f3返回的指针：*指针
     cout << (*(*pd)[2])(av,3) << ": " << *(*(*pd)[2])(av,3) << endl;
     // cin.get();
     return 0;

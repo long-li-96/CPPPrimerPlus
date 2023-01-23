@@ -5,7 +5,7 @@ int main()
     char ch;
     int count = 0;
     cin.get(ch);
-    while (cin.fail() == false)
+    while (cin.fail() == false) // cin输入错误
     {
         cout << ch;
         ++count;

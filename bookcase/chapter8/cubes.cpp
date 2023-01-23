@@ -14,13 +14,13 @@ int main()
     return 0;
 }
 
-double cube(double a)
+double cube(double a) // 重新生成一个对象返回，不改变传进来的参数数据
 {
     a *= a*a;
     return a;
 }
 
-double refcube(double &ra)
+double refcube(double &ra) // 使用引用对传进来的参数数据更改
 {
     ra *= ra * ra;
     return ra;

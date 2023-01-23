@@ -11,15 +11,15 @@ int main()
     char next;
 
     cout << "Enter a line:\n";
-    cin.get(input,ArSize);
+    cin.get(input, ArSize);
     while(cin) // 空白输入结束
     {
         cin.get(next);
-        while (next != '\n') // string didn't fit!
-            cin.get(next); // dispose of remainder
+        while (next != '\n') // string didn't fit! 换行符之后还有输入,被next捕获
+            cin.get(next); // dispose of remainder 一直捕获并舍弃
         strcount(input);
         cout << "Enter next line (empty line to quit):\n";
-        cin.get(input,ArSize);
+        cin.get(input, ArSize);
     }
     cout << "Bye\n";
     return 0;
@@ -32,7 +32,7 @@ void strcount(const char * str)
     int count = 0;        // automatic local variable
 
     cout << "\"" << str << "\" contains ";
-    while(*str++)         // go to end of string
+    while(* str ++)         // go to end of string
         count++;
     total += count;
     cout << count << " characters\n";

@@ -11,7 +11,7 @@ Cow::Cow()
 
 Cow::Cow(const char * nm, const char * ho, double wt)
 {
-    std::strncpy(name, nm, 20); // 将字符串nm指定长度复制到name，防止栈空间溢出导致程序崩溃
+    std::strncpy(name, nm, 20); // 将字符串nm指定长度20复制到name，防止栈空间溢出导致程序崩溃
     int ho_len = std::strlen(ho);
     hobby = new char[ho_len + 1];
     std::strcpy(hobby, ho);

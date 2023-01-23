@@ -4,7 +4,7 @@ using std::cout;
 #include "stonewt.h"
 
 // construct Stonewt object from double value
-Stonewt::Stonewt(double lbs)
+Stonewt::Stonewt(double lbs) // 转换函数，没加explicit可以隐式转换
 {
     stone = int (lbs) / Lbs_per_stn; // integer division
     pds_left = int (lbs) % Lbs_per_stn + lbs - int(lbs);

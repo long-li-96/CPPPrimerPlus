@@ -10,7 +10,7 @@ int setgolf(golf & g)
     char name[Len];
     int hc;
     std::cout << "Please enter name:";
-    std::cin.get(name,Len);
+    std::cin.get(name, Len);
     std::cin.ignore(Len,'\n'); // 忽略'\n'
     std::cout << "Please enter hc: ";
     std::cin >> hc;

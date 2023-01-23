@@ -12,8 +12,8 @@ int main()
     string input;
     
     cout << "Enter a line:\n";
-    getline(cin,input);
-    while(cin)
+    getline(cin, input);
+    while(cin) // 输入非空
     {
         strcount(input);
         cout << "Enter next line (empty line to quit):\n";
@@ -27,7 +27,7 @@ int main()
 
 void strcount(const string str)
 {
-    static int total = 0; // static local variable
+    static int total = 0; // static local variable 静态变量用来给函数调用等计数
     int count = 0;
 
     cout << "\"" << str << "\"contains ";

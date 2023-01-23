@@ -8,7 +8,7 @@ int main()
 {
     string str1;
     cout << "Enter a string(q to quit): ";
-    while(getline(cin,str1))
+    while(getline(cin, str1))
     {
         if (str1 == "q")
             break;
@@ -21,9 +21,9 @@ int main()
 
 void Upper(string & str)
 {
-    int len = str.size();
+    int len = str.size(); // string.size()
     int i = 0;
-    while (i<len)
+    while (i < len)
     {
         if (isalpha(str[i]))
             str[i] = toupper(str[i]);

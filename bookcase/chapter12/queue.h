@@ -21,7 +21,11 @@ class Queue
     private:
         // class scope definitions
         // Node is a nested structure definition local to this class
-        struct Node {Item item; struct Node * next;}; // next是指向Node的指针
+        struct Node 
+        {
+            Item item; 
+            struct Node * next;
+        }; // next是指向Node的指针
         enum {Q_SIZE = 10};
         // private class members
         Node * front; // pointer to front of Queue

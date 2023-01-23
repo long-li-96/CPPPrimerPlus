@@ -7,7 +7,7 @@ class Move
         double x;
         double y;
     public:
-        Move(double a = 0, double b = 0);  // set x, y to a, b
+        Move(double a = 0, double b = 0);  // set x, y to a, b as default
         void showmove() const; // shows current x, y values
         Move add(const Move & m) const;
         // this function adds x of m to x of invoking object to get new x,

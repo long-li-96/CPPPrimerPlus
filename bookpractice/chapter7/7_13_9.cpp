@@ -25,7 +25,7 @@ void display2(const student * ps);
 
 // display3() takes the address of the first element of an array
 // arguments and displays the contents of the structures
-void display3(const student pa[],int n);
+void display3(const student pa[], int n);
 
 int main()
 {
@@ -81,7 +81,7 @@ void display2(const student * ps)
     cout << "ooplevel: " << ps->ooplevel << endl;
 }
 
-void display3(const student pa[],int n)
+void display3(const student pa[],int n) // 指针当数组名使用
 {
     for (int i = 0;i<n;i++)
     {

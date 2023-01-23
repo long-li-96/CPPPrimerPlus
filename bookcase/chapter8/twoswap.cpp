@@ -10,9 +10,9 @@ struct job
     int floor;
 };
 
-// explicit specialization
-template <> void Swap<job>(job &j1,job &j2);
-void Show(job &j);
+// explicit specialization 显示具体化
+template <> void Swap<job>(job & j1, job & j2);
+void Show(job & j);
 
 int main()
 {
@@ -20,8 +20,8 @@ int main()
     cout.precision(2);
     cout.setf(ios::fixed,ios::floatfield);
     int i = 10, j = 20;
-    cout << "i,j = " << i << ", " << j << ".\n";
-    Swap(i,j); // generate void Swap(int &,int &)
+    cout << "i, j = " << i << ", " << j << ".\n";
+    Swap(i, j); // generate void Swap(int &,int &) 隐式实例化
     cout << "Now i,j = " << i << ", " << j << ".\n";
 
     job sue = {"Susan Yaffee",73000.60,7};
@@ -29,7 +29,7 @@ int main()
     cout << "Before job Swapping:\n";
     Show(sue);
     Show(sidney);
-    Swap(sue,sidney); // use void Swap(job &,job &)
+    Swap(sue,sidney); // use void Swap(job &,job &) 显式实例化
     cout << "After job Swapping:\n";
     Show(sue);
     Show(sidney);

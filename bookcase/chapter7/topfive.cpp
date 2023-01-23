@@ -8,7 +8,7 @@ int main()
 {
     string list[SIZE]; // an array holding 5 string object
     cout << "Enter your " << SIZE << " favorite astronomical sights:\n";
-    for (int i = 0;i<SIZE;i++)
+    for (int i = 0; i < SIZE; i ++)
     {
         cout << i+1 << ": ";
         getline(cin,list[i]);
@@ -21,6 +21,6 @@ int main()
 
 void display(const string sa[],int n)
 {
-    for (int i = 0;i<n;i++)
+    for (int i = 0; i < n; i ++)
         cout << i+1 << ": " << sa[i] << endl;
 }

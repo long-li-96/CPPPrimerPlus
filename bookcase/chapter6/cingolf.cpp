@@ -14,7 +14,7 @@ int main()
         while (!(cin >> golf[i]))
         {
             cin.clear();
-            while (cin.get() != '\n')
+            while (cin.get() != '\n') // 一直获取到换行符为止，cin限定字符串长度时，多余的输入会在缓冲区保留
                 continue; // get rid of bad input
             cout << "Please enter a number: ";
         }

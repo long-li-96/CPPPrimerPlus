@@ -1,4 +1,5 @@
 // namespaces
+// 对namesp.h中的命名空间做补充
 #include "namesp.h"
 
 namespace pers
@@ -28,7 +29,7 @@ namespace debts
         std::cin >> rd.amount;
     }
 
-    void showPerson(const Debt & rd)
+    void showDebt(const Debt & rd)
     {
         showPerson(rd.name);
         std::cout << ": $" << rd.amount << std::endl;
@@ -37,7 +38,7 @@ namespace debts
     double sumDebt(const Debt ar[], int n)
     {
         double total = 0;
-        for (int i = 0;i<n;i++)
+        for (int i = 0; i < n; i ++)
             total += ar[i].amount;
         return total;
     }

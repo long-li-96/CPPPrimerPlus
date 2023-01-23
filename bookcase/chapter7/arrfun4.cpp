@@ -1,7 +1,7 @@
 // functions with an array range
 #include <iostream>
 const int ArSize = 8;
-int sum_arr(const int * begin, const int * end);
+int sum_arr(const int * begin, const int * end); // 指针指向的数据是不可变
 int main()
 {
     using namespace std;

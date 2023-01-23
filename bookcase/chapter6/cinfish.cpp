@@ -16,7 +16,7 @@ int main()
             cout << "fish #" << i+1 << ": ";
     }
     double total = 0.0;
-    for (int j= 0;j<i;j++)
+    for (int j= 0;j<i;j++) // i非循环里的自动变量，用来给数组计数，
         total += fish[j];
     if (i == 0)
         cout << "No fish\n";

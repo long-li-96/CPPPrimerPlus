@@ -1,15 +1,15 @@
 #include <iostream>
 using namespace std;
-#include <cstring> // for strlen(),strcpy()
+#include <cstring> // for strlen(), strcpy()
 struct stringy{
     char * str; // pointer to a string
     int ct; // length of string (not counting '\0')
 };
 
-// prototype for set(),show(),and show() go here
+// prototype for set(), show(), and show() go here
 void show(const char * str,int n = 1);
 void show(const stringy & beany,int n = 1);
-void set(stringy & beany,const char * str);
+void set(stringy & beany, const char * str);
 
 int main()
 {
