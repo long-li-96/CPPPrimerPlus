@@ -5,9 +5,9 @@
 // Cd methods
 Cd::Cd(char const * s1, char const * s2, int n, double x)
 {
-    std::strncpy(performers, s1, 50);
+    std::strncpy(performers, s1, 49);
     performers[49] = '\0'; 
-    std::strncpy(label, s2, 20);
+    std::strncpy(label, s2, 19);
     label[19] = '\0';
     if (n < 0)
         n = 0;
