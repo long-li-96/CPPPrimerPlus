@@ -43,8 +43,8 @@ std::ostream & operator<<(std::ostream & os, const baseDMA & bdma)
 
 void baseDMA::View() const
 {
-    std::cout << "label: " << Label();
-    std::cout << "rating: " << Rating();
+    std::cout << "label: " << Label() << " ";
+    std::cout << "rating: " << Rating() << " ";
     std::cout << std::endl;
 }
 
@@ -63,15 +63,15 @@ lacksDMA::lacksDMA(char const * c, const DMA & dma): DMA(dma)
 
 std::ostream & operator<<(std::ostream & os, const lacksDMA & ldma)
 {
-    os << ldma.color << (const DMA & ) ldma;
+    os << ldma.color << " " << (const DMA & ) ldma;
     return os;
 }
 
 void lacksDMA::View() const
 {
-    std::cout << "color: " << color;
-    std::cout << "label: " << Label();
-    std::cout << "rating: " << Rating();
+    std::cout << "color: " << color << " ";
+    std::cout << "label: " << Label() << " ";
+    std::cout << "rating: " << Rating() << " ";
     std::cout << std::endl;
 }
 
@@ -119,8 +119,8 @@ std::ostream & operator<<(std::ostream & os, const hasDMA & hs)
 
 void hasDMA::View() const
 {
-    std::cout << "style: " << style;
-    std::cout << "label: " << Label();
-    std::cout << "rating: " << Rating();
+    std::cout << "style: " << style << " ";
+    std::cout << "label: " << Label() << " ";
+    std::cout << "rating: " << Rating() << " ";
     std::cout << std::endl;
 }

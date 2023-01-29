@@ -23,13 +23,24 @@ int main()
         char * temp_str = new char[temp.size() + 1];
         std::strcpy(temp_str, temp.c_str());
         cout << "Enter dma's rating: ";
-        cin >> rat;
+        while (!(cin >> rat))
+        {
+            cin.clear();
+            while (cin.get() != '\n')
+                continue;
+            cout << "Please enter integer:\n";
+        }
         cout << "Enter 1 for baseDMA, 2 for lacksDMA,"
              << "or 3 for hasDMA: ";
         while (cin >> kind && (kind != '1' && 
         kind != '2' && kind != '3'))
+        {
+            while (cin.get() != '\n')
+                continue;
             cout << "Enter 1, 2, 3: ";
-        cin.clear();
+        }
+        while (cin.get() != '\n')
+            continue;
         if (kind == '1')
             p_dma[i] = new baseDMA(temp_str, rat);
         else if (kind == '2')
@@ -50,8 +61,6 @@ int main()
             std::strcpy(temp1_str, temp1.c_str());
             p_dma[i] = new hasDMA(temp1_str, temp_str, rat);
         }
-        while (cin.get() != '\n')
-            continue;
     }
     cout << endl;
 
