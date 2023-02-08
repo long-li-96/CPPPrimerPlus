@@ -4,7 +4,7 @@
 
 template <class T, int n>
 class ArrayTP
-{
+{ // 类名实际是ArrayTP< class T, int n>
 private:
     T ar[n];
 

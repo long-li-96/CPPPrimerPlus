@@ -1,4 +1,4 @@
-// making a 2-d array 二维数组
+// making a 2-d array 递归使用模板实现二维数组
 #include <iostream>
 #include "arraytp.h"
 
