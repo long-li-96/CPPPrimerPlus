@@ -1,4 +1,4 @@
-// modified Stack template // 指针类模板
+// modified Stack template // 指针类模板, 指针栈允许指定大小的数组，构造函数传参指定元素数量，动态数组
 #ifndef STCKTP1_H_
 #define STCKTP1_H_
 

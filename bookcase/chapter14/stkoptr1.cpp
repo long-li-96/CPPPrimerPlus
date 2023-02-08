@@ -1,4 +1,4 @@
-// testing stack of pointers
+// testing stack of pointers 指针栈 
 #include <iostream>
 #include <cstdlib> // for rand(), srand()
 #include <ctime>
@@ -29,13 +29,15 @@ int main()
     // out basket
 
     const char * out[Num];
+    // for (int i = 0; i < Num; i ++)
+    //     std::cout << out[i];
 
     int processed = 0;
     int nextin = 0;
     while (processed < Num)
     {
         if (st.isempty())
-            st.push(in[nextin++]); // 从in basket 放进 stack
+            st.push(in[nextin++]); // 从in basket 放进 stack 只是把指针数组中的元素值赋值为字符串地址，delete时删除的是指针数组，而不是数组元素指向的字符串
         else if (st.isfull())
             st.pop(out[processed ++]); // stack满了则从stack取出放入out basket
         else if (std::rand() % 2  && nextin < Num) // 50-50 chance
