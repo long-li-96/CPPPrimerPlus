@@ -26,7 +26,7 @@ private:
 public:
     beta( T t, int i) : q(t), n(i) {}
     template <typename U>  // template method 泛型函数模板
-    U blab(U u, T t) {return (n.Value() + q.Value() * u / t);}
+    U blab(U u, T t) {return (n.Value() + q.Value()) * u / t;}
     // 这里的T是与构造函数调用时传的类型是同一个,U是新定义的泛型
     void Show() const {q.show(); n.show();}
 };
