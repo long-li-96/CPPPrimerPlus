@@ -7,7 +7,8 @@
 # 忽略exe文件
 *.exe
 # 忽略本地vscode配置
-/.vscode
+#/.vscode
 # 忽略mac的奇怪文件
 .DS_Store
 .gitignore
+*.out

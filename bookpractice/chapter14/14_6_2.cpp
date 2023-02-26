@@ -6,13 +6,13 @@ private:
     char fab[20];
 
 public:
-    Frabjous(const char * s = "C++"): fab(s) {}
-    virtual void tell() (cout << fab; )
+    Frabjous(char const * s = "C++"): fab(s) {}
+    virtual void tell() {cout << fab; }
 };
 
 class Glom 
 {
-private:
+private://
     int glip;
     Frabjous fb;
 
