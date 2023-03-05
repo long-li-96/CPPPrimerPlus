@@ -98,7 +98,7 @@ dispose: vt 处置 [dɪˈspoʊz]
 chunk: n 大块  [tʃʌŋk]
 heap:n 堆 [hiːp]
 interactive: 互动的
-solicits: v 请求
+solicit: v 请求
 handicap: n 残疾，障碍
 reminder: n 提醒 [rɪˈmaɪndər]
 remaining: adj 剩下的[rɪˈmeɪnɪŋ]

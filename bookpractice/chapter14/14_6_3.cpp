@@ -22,6 +22,18 @@ public:
     void tell();
 };
 
+// 这是copilot写的代码
+class Gloam: public Glom
+{
+private:
+    double z;
+
+public :
+    Gloam(int g = 0, const char * s = "C++", double z = 0.0);
+    Gloam(int g, const Frabjous & f, double z = 0.0);
+    void tell();
+};
+
 Glom::Glom(int g, const char * s) : glip(g), Frabjous::Frabjous(s)
 {
 
@@ -37,5 +49,6 @@ void Glom::tell()
     cout << glip << " ";
     Frabjous::tell();
 }
+
 
 //

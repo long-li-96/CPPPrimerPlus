@@ -5,6 +5,7 @@
     // located in a .vscode folder in your workspace (project root folder).
     "version": "0.2.0",
     "configurations": [
+        
         {
             /* ------ these three options are mandatory ------ */
             // The type of debugger to use for this launch configuration.
