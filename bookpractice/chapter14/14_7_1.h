@@ -39,9 +39,8 @@ int Pair<T1, T2>::sum() {
 }
 // 辅助函数 for Wine::Show()
 template <class T1, class T2>
-void Pair<T1, T2>::show(int y)
-{
-  for (int i = 0; i < y; i ++)
+void Pair<T1, T2>::show(int y) {
+  for (int i = 0; i < y; i++)
     std::cout << "\t\t" << a[i] << "\t\t" << b[i] << std::endl;
 }
 
@@ -85,37 +84,33 @@ Wine::Wine(const char* l, int y, const int yr[], const int bot[]) {
   wine_prod_years = PairArray(ArrayInt(yr, y), ArrayInt(bot, y));
 }
 
-Wine::Wine(const char* l, int y)
-{
+Wine::Wine(const char* l, int y) {
   label = l;
   save_years = y;
   // wine_prod_years = PairArray(ArrayInt(0,y),ArrayInt(0,y));
 }
 
-int Wine::sum()
-{
-  return wine_prod_years.sum();
-}
+int Wine::sum() { return wine_prod_years.sum(); }
 
-void Wine::Show()
-{
+void Wine::Show() {
   std::cout << "Wine: " << label << std::endl;
-  std::cout << "\t\t" << "Year" << "\t\t" << "Bottles" << std::endl;
+  std::cout << "\t\t"
+            << "Year"
+            << "\t\t"
+            << "Bottles" << std::endl;
   wine_prod_years.show(save_years);
 }
 
-void Wine::GetBottles()
-{
+void Wine::GetBottles() {
   ArrayInt ar1(save_years);
   ArrayInt ar2(save_years);
-  std::cout << "Enter " << label << "data for " << 
-  save_years << "of year(s)" << std::endl;
-  for (int i = 0; i < save_years; i ++)
-  {
+  std::cout << "Enter " << label << " data for " << save_years << " of year(s)"
+            << std::endl;
+  for (int i = 0; i < save_years; i++) {
     std::cout << "Enter year: ";
     std::cin >> ar1[i];
     std::cout << "Enter bottles for that year: ";
-    std::cin >> ar2[i]; 
+    std::cin >> ar2[i];
   }
   wine_prod_years = PairArray(ar1, ar2);
 }
