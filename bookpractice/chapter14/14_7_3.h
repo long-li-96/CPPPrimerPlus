@@ -1,3 +1,5 @@
+// 虚基类最好不要做类模板的类型参数，当类模板中数据类型是指针时才可以
+
 #ifndef WORKER_QUEUE_H
 #define WORKER_QUEUE_H
 
@@ -17,12 +19,12 @@ class Worker  // an base class
  public:
   Worker() : fullname("no one"), id(0L) {}
   Worker(const std::string &s, long n) : fullname(s), id(n) {}
-  virtual ~Worker();  
-  virtual void Set();
-  virtual void Show() const;
+  virtual ~Worker() = 0;  
+  virtual void Set() = 0;
+  virtual void Show() const = 0;
 };
 
-class Waiter : public Worker  // 继承自基类
+class Waiter : virtual public Worker  // 继承自基类
 {
  private:
   int panache;
@@ -39,7 +41,7 @@ class Waiter : public Worker  // 继承自基类
   void Show() const;
 };
 
-class Singer : public Worker {
+class Singer : virtual public Worker {
  protected:
   enum { other, alto, contralto, soprano, base, baritone, tenor };
   enum { Vtypes = 7 };
@@ -60,25 +62,25 @@ class Singer : public Worker {
 };
 
 // multiple inheritance
-// class SingingWaiter : public Singer, public Waiter {
-//  protected:
-//   void Data() const;
-//   void Get();
+class SingingWaiter : public Singer, public Waiter {
+ protected:
+  void Data() const;
+  void Get();
 
-//  public:
-//   SingingWaiter() {}
-//   // 构造虚基类对象，避免构造基类对象（同一虚基类派生来）传递冲突
-//   SingingWaiter(const std::string &s, long n, int p = 0, int v = other)
-//       : Worker(s, n), Waiter(s, n, p), Singer(s, n, v) {}
-//   SingingWaiter(const Worker &wk, int p = 0, int v = other)
-//       : Worker(wk), Waiter(wk, p), Singer(wk, v) {}
-//   SingingWaiter(const Waiter &wt, int v = other)
-//       : Worker(wt), Waiter(wt), Singer(wt, v) {}
-//   SingingWaiter(const Singer &sg, int p = 0)
-//       : Worker(sg), Waiter(sg), Singer(sg) {}
-//   void Set();
-//   void Show() const;
-// };
+ public:
+  SingingWaiter() {}
+  // 构造虚基类对象，避免构造基类对象（同一虚基类派生来）传递冲突
+  SingingWaiter(const std::string &s, long n, int p = 0, int v = other)
+      : Worker(s, n), Waiter(s, n, p), Singer(s, n, v) {}
+  SingingWaiter(const Worker &wk, int p = 0, int v = other)
+      : Worker(wk), Waiter(wk, p), Singer(wk, v) {}
+  SingingWaiter(const Waiter &wt, int v = other)
+      : Worker(wt), Waiter(wt), Singer(wt, v) {}
+  SingingWaiter(const Singer &sg, int p = 0)
+      : Worker(sg), Waiter(sg), Singer(sg) {}
+  void Set();
+  void Show() const;
+};
 
 template <typename Type>
 class Queue {

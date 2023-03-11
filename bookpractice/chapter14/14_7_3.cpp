@@ -1,3 +1,4 @@
+// 虚基类最好不要做类模板的类型参数，当类模板中数据类型是指针时才可以
 #include "14_7_3.h"
 
 using std::cin;
@@ -28,6 +29,7 @@ void Worker::Data() const {
 void Worker::Get() {
   cout << "Enter worker's name: ";
   getline(cin, fullname);
+  cout << endl;
   cout << "Enter worker's ID: ";
   cin >> id;
   while (cin.get() != '\n') continue;
@@ -156,7 +158,7 @@ bool Queue<Type>::enqueue(const Type& item) {
   if (front == NULL)  // if queue is empty,
     front = add;      // place item at front
   else
-    rear->next = NULL;  // else place at rear
+    rear->next = add;  // else place at rear
   rear = add;           // have rear point to new node
   return true;
 }
