@@ -1,5 +1,3 @@
-// 虚基类最好不要做类模板的类型参数，当类模板中数据类型是指针时才可以
-
 #ifndef WORKER_QUEUE_H
 #define WORKER_QUEUE_H
 
@@ -19,7 +17,7 @@ class Worker  // an base class
  public:
   Worker() : fullname("no one"), id(0L) {}
   Worker(const std::string &s, long n) : fullname(s), id(n) {}
-  virtual ~Worker() = 0;  
+  virtual ~Worker() = 0;
   virtual void Set() = 0;
   virtual void Show() const = 0;
 };
@@ -86,7 +84,7 @@ template <typename Type>
 class Queue {
  private:
   struct Node {
-    Type item;
+    Type *item;
     struct Node *next;
   };
   enum { Q_SIZE = 10 };
@@ -103,51 +101,8 @@ class Queue {
   bool isempty() const;
   bool isfull() const;
   int queuecount() const;
-  bool enqueue(const Type &item);  // add item to end of queue
-  bool dequeue(Type &item);        // remove item from front of queue
+  bool enqueue(Type *item);  // add item to end of queue
+  bool dequeue(Type *item);  // remove item from front of queue
   void show() const;
 };
 #endif
-
-
-// #ifndef QUEUE_H_
-// #define QUEUE_H_
-// #include<iostream>
-// #include<string>
-// class Worker
-// {
-// private:
-// 	std::string fullname;
-// 	long id;
-// public:
-// 	Worker() :fullname("None"), id(0L){}
-// 	Worker(const std::string& fn, long n) :fullname(fn), id(n){}
-// 	~Worker(){}
-// 	void set(const std::string& fn, long n){ fullname = fn; id = n; }
-// 	Worker& operator=(const Worker& wok);
-// 	void show()const;
-// };
-
-// template<class Type>
-// class Queue
-// {
-// private:
-// 	struct Node { Type item; Node* next; };
-// 	enum { Q_SIZE = 10 };
-// 	Node* front, *rear;
-// 	int items;
-// 	const int qsize;
-// 	Queue(const Queue& q) :qsize(0){}
-// 	Queue& operator=(const Queue& q) { return *this; }
-// public:
-// 	Queue(int qs = Q_SIZE);
-// 	~Queue();
-// 	bool isempty()const;
-// 	bool isfull()const;
-// 	int queuecount()const;
-// 	bool enqueue(const Type& item);
-// 	bool dequeue(Type& item);
-// 	void show()const;
-// };
-
-// #endif
