@@ -56,7 +56,9 @@
     // Whether to ignore selection to always run entire file. (Default is false)
     "code-runner.ignoreSelection": true,
     "files.associations": {
-        "new": "cpp"
+        "new": "cpp",
+        "iostream": "cpp",
+        "chrono": "cpp"
     },
     // --------------------------------------------------------------------------------------
 }

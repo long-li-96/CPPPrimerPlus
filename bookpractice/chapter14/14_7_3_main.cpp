@@ -47,7 +47,6 @@ int main() {
     cout << endl;
   }
   cout << "\nHere is your staff:\n";
-  int i;
   queue_worker.show();
   cout << queue_worker.queuecount() << endl;
   cout << "Bye.\n";

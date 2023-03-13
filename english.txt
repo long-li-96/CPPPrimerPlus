@@ -180,3 +180,6 @@ fetch: v 拿来 [fetʃ]
 multiple: adj 多态的 [ˈmʌltɪpl]
 category: n 种类  [ˈkætəɡɔːri]
 kitchen: n 厨房 [ˈkɪtʃɪn]
+diamond: n/adj 方块 [ˈdaɪəmənd]
+club：n 梅花
+spade: n 黑桃 [speɪd]

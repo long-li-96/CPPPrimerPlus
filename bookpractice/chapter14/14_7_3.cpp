@@ -4,7 +4,7 @@ using std::cin;
 using std::cout;
 using std::endl;
 
-////////////////////Woker/////////////////////
+////////////////////Worker/////////////////////
 
 // Worker methods
 Worker::~Worker() {}

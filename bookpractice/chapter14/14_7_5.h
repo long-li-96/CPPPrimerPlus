@@ -69,6 +69,7 @@ class highfink : public manager,
            const std::string &rpo, int ico);
   highfink(const abstr_emp &e, const std::string &rpo, int ico);
   highfink(const fink &f, int ico);
+  highfink(const manager & m, const std::string & rpo);
   highfink(const highfink &h);
   virtual void ShowAll() const;
   virtual void SetAll();
