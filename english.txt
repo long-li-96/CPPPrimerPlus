@@ -185,3 +185,4 @@ club：n 梅花
 spade: n 黑桃 [speɪd]
 allocate：vt 分配 [ˈæləkeɪt]
 superb: adj 极好的 [suːˈpɜːrb]
+identification: n 识别 [aɪˌdentɪfɪˈkeɪʃn]
