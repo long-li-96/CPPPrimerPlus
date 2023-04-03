@@ -29,11 +29,11 @@ int main()
     play = tolower(play);
     while (play == 'y')
     {
-        string target = wordlist[std::rand() % NUM];
+        string target = wordlist[std::rand() % NUM]; // 从数组里取随机的元素：字符串
         int length = target.length();
         string attempt(length, '-');
         string badchars;
-        int guesses = 6;
+        int guesses = 6; // 猜测次数限制
         cout << "Guess my secret word. It has " << length
             << " letters, and you guess\n"
             << "one letter at a time. You get " << guesses
@@ -44,17 +44,18 @@ int main()
             char letter;
             cout << "Guess a letter: ";
             cin >> letter;
-            if (badchars.find(letter) != string::npos
-            || attempt.find(letter) != string::npos
+            if (badchars.find(letter) != string::npos // string::npos常量==size_type类型的最大值
+            || attempt.find(letter) != string::npos // string.find(letter)返回从string中找到letter的位置
             ) 
             {
                 cout << "You already guessed that. Try again.\n";
                 continue;
             }
             int loc = target.find(letter);
+            cout << loc;
             if (loc == string::npos)
             {
-                cout << "Oh, bad guess!\n";
+                cout << "Oh, bad guess!\n"; // 猜对不减次数，猜错才减
                 --guesses;
                 badchars += letter; // add to string
             }
@@ -63,11 +64,11 @@ int main()
                 cout << "Good guess!\n";
                 attempt[loc] = letter;
                 // check if letter appears again
-                loc = target.find(letter, loc + 1);
+                loc = target.find(letter, loc + 1); // 从指定位置开始查找
                 while (loc != string ::npos)
                 {
                     attempt[loc] = letter;
-                    loc = target.find(letter, loc + 1);
+                    loc = target.find(letter, loc + 1); // 将目标字符串中指定字符全部找出来，并复制到attempt中(位置相同)
                 }
             }
             cout << "Your word: " << attempt << endl;
