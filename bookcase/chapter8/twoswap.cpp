@@ -10,7 +10,7 @@ struct job
     int floor;
 };
 
-// explicit specialization 显示具体化
+// explicit specialization 显式具体化
 template <> void Swap<job>(job & j1, job & j2);
 void Show(job & j);
 
