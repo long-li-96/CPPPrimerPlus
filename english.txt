@@ -191,3 +191,5 @@ lottery: n 彩票 /ˈlɑːtəri/
 truncate: vt 截断 /ˈtrʌŋkeɪt/
 elephant: n 象 /ˈɛləfənt/
 vector: n 矢量 /ˈvektər/
+iterator: n 迭代器 /ɪtə'retɚ/
+reprise: vt 重演 /rɪˈpriːz/
