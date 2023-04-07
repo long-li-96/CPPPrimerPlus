@@ -193,3 +193,5 @@ elephant: n 象 /ˈɛləfənt/
 vector: n 矢量 /ˈvektər/
 iterator: n 迭代器 /ɪtə'retɚ/
 reprise: vt 重演 /rɪˈpriːz/
+indicate: vt 表明 /ˈɪndɪkeɪt/
+anonymous: adj 匿名的 /əˈnɑːnɪməs/

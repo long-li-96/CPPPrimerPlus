@@ -57,6 +57,7 @@ int main() {
     cout << "No entries. ";
   cout << "Bye.\n";
   return 0;
+  // vector<double>::iterator pr; 声明一个迭代器
 }
 
 bool operator<(const Review& r1, const Review& r2) {
