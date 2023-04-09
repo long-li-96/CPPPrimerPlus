@@ -122,7 +122,8 @@
         "vector": "cpp",
         "algorithm": "cpp",
         "filesystem": "cpp",
-        "typeindex": "cpp"
+        "typeindex": "cpp",
+        "list": "cpp"
     },
     // --------------------------------------------------------------------------------------
 }

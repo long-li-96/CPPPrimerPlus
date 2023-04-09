@@ -195,3 +195,4 @@ iterator: n 迭代器 /ɪtə'retɚ/
 reprise: vt 重演 /rɪˈpriːz/
 indicate: vt 表明 /ˈɪndɪkeɪt/
 anonymous: adj 匿名的 /əˈnɑːnɪməs/
+minus: prep 减 /ˈmaɪnəs/
