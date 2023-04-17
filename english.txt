@@ -178,6 +178,7 @@ hierarchy： n 等级制度 [ˈhaɪərɑːrki]
 ambiguoous: adj 模棱两可的 [æmˈbɪɡjuəs]
 fetch: v 拿来 [fetʃ] 
 multiple: adj 多态的 [ˈmʌltɪpl]
+multiply: vt 乘以 /ˈmʌltɪplaɪ/
 category: n 种类  [ˈkætəɡɔːri]
 kitchen: n 厨房 [ˈkɪtʃɪn]
 diamond: n/adj 方块 [ˈdaɪəmənd]
@@ -197,3 +198,4 @@ indicate: vt 表明 /ˈɪndɪkeɪt/
 anonymous: adj 匿名的 /əˈnɑːnɪməs/
 minus: prep 减 /ˈmaɪnəs/
 island: n 岛 /ˈaɪlənd/
+permutation: n 排列方式 /ˌpɜːrmjuˈteɪʃn/
