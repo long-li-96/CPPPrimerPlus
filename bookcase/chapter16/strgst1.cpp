@@ -3,7 +3,7 @@
 
 #include <string>
 #include <iostream>
-#include <algorithm>
+#include <algorithm> // for next_permutation()
 
 int main()
 {
