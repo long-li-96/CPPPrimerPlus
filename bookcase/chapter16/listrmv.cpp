@@ -27,7 +27,7 @@ int main() {
   cout << endl;
 
   list<int>::iterator last;
-  last = remove(lb.begin(), lb.end(), 4);
+  last = remove(lb.begin(), lb.end(), 4); // 删除lb中值为4的元素
   cout << "After using the remove() function:\n";
   cout << "lb: \t";
   for_each(lb.begin(), lb.end(), Show);

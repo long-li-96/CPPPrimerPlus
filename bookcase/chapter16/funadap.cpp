@@ -7,6 +7,7 @@
 #include <algorithm>
 #include <functional> // for transform()、multiplies<>、bind
 
+// transform()用于对容器中的元素进行操作并将结果存储在另一个容器中。它可以应用一个一元操作（即仅使用一个输入参数的操作）或二元操作（使用两个输入参数的操作）
 void Show(double);
 const int LIM = 6;
 int main()
@@ -37,7 +38,7 @@ int main()
     cout << "prod:\t";
     for_each(prod.begin(), prod.end(), Show);
     cout << endl;
-
+    
     return 0;
 }
 

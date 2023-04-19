@@ -200,3 +200,4 @@ minus: prep 减 /ˈmaɪnəs/
 island: n 岛 /ˈaɪlənd/
 permutation: n 排列方式 /ˌpɜːrmjuˈteɪʃn/
 algorithm: n 算法 /ˈælɡərɪðəm/
+frequency: n 频率 /ˈfriːkwənsi/
