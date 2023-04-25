@@ -16,7 +16,7 @@ int main()
     two.insert(two.begin(), stuff, stuff+5); // 用数组做迭代器
     int more[6] = {6, 4, 2, 4, 6, 5};
     list<int> three(two);
-    three.insert(three.end(), more, more+6); // 将more[0,6)插入three.end()前面
+    three.insert(three.end(), more, more+6); // insert将more[0,6)插入three.end()前面即three最后一个元素的后面
 
     cout << "List one: ";
     for_each(one.begin(), one.end(), outint);

@@ -24,7 +24,7 @@ int main() {
   cout << "Enter words (enter quit to quit):\n";
   string input;
   while (cin >> input && input != "quit")
-    words.push_back(input);  // 矢量向末尾追加元素
+    words.push_back(input);  // 矢量向末尾追加元素,自动增长矢量长度
 
   cout << "You entered the following words:\n";
   for_each(words.begin(), words.end(), display);
