@@ -5,6 +5,8 @@
 #include <string>
 #include <set>
 
+// set是关联集合，可反转，可排序，键是唯一的，不能存储多个相同的值，使用模板参数来制定要存储的值类型
+
 #include <algorithm>
 #include <iterator>
 
