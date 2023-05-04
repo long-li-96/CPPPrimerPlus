@@ -23,7 +23,7 @@ int main() {
   la.remove(4);
   cout << "After using the remove() method:\n";
   cout << "la: \t";
-  for_each(la.begin(), la.end(), Show);
+  for_each(la.begin(), la.end(), Show); // for_each返回函数对象，为了实现这个函数对象的计数等功能
   cout << endl;
 
   list<int>::iterator last;

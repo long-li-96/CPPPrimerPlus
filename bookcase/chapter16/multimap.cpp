@@ -14,7 +14,7 @@ int main()
     using namespace std;
     MapCode codes;
 
-    codes.insert(Pair(415, "San Francisco"));
+    codes.insert(Pair(415, "San Francisco")); // multimap中元素是键值对，需要用pair对象存储
     codes.insert(Pair(510, "Oakland"));
     codes.insert(Pair(718, "Brooklyn"));
     codes.insert(Pair(718, "Sraten Island"));
@@ -22,7 +22,7 @@ int main()
     codes.insert(Pair(510, "Berkley"));
 
     cout << "Number of cities with area code 415: "
-         << codes.count(415) << endl;
+         << codes.count(415) << endl; // 返回具有键为415的元素的个数
     cout << "Number of cities with area code 718: "
          << codes.count(718) << endl;
     cout << "Number of cities with area 510: "
@@ -36,7 +36,7 @@ int main()
              << (*it).second << endl;
     }
 
-    pair<MapCode::iterator, MapCode::iterator> range = codes.equal_range(718);
+    pair<MapCode::iterator, MapCode::iterator> range = codes.equal_range(718); // 定义一个pair对象，用来存储equal_range返回的两个迭代器：first、second
 
     cout << "Cities with area code 718: \n";
     for (it = range.first; it != range.second; ++it)

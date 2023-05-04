@@ -31,16 +31,16 @@ int main()
     cout << endl;
     
     cout << "Union of A and B: \n";
-    set_union(A.begin(), A.end(), B.begin(), B.end(), out); // 显示A和B的并集
+    set_union(A.begin(), A.end(), B.begin(), B.end(), out); // 显示A和B的并集，这里的out是输出迭代器，不能是常量迭代器begin()，复制算法
     cout << endl;
 
     cout << "Intersection of A and B: ";
-    set_intersection(A.begin(), A.end(), B.begin(), B.end(), out); // 显示A和B的交集
+    set_intersection(A.begin(), A.end(), B.begin(), B.end(), out); // 显示A和B的交集,这里的out是输出迭代器，不能是常量迭代器begin()
     cout << endl;
 
 
     cout << "Difference of A and B:\n";
-    set_difference(A.begin(), A.end(), B.begin(), B.end(), out); // 显示A和B的差
+    set_difference(A.begin(), A.end(), B.begin(), B.end(), out); // 显示A和B的差,这里的out是输出迭代器，不能是常量迭代器begin()
     cout << endl;
 
     set<string> C;

@@ -39,7 +39,7 @@ int main() {
 
   for_each(etcerera.begin(), etcerera.end(), outint);
   cout << endl;
-  yadayada.remove_if(f100);              // use a named function object list模板中的类成员接受一个谓词
+  yadayada.remove_if(f100);              // use a named function object list模板中的remove_if类成员接受一个谓词
   etcerera.remove_if(TooBig<int>(200));  // construct a function object 
 
   cout << "Trimmed lists: \n";
