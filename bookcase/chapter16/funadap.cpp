@@ -15,8 +15,8 @@ int main()
     using namespace std;
     double arr1[LIM] = {28, 29, 30, 35, 38, 59};
     double arr2[LIM] = {63, 65, 69, 75, 80, 99};
-    vector<double> gr8 (arr1, arr1+LIM);
-    vector<double> m8(arr2, arr2 + LIM);
+    vector<double> gr8 (arr1, arr1+LIM); // c++11支持初始列表， vector<double> gr8 = {28, 29, 30, 35, 38, 59};
+    vector<double> m8(arr2, arr2 + LIM); // c++11支持初始列表， vector<double> m8 {63, 65, 69, 75, 80, 99};
     cout.setf(ios_base::fixed);
     cout.precision(1);
     cout << "gt8:\t";

@@ -15,7 +15,7 @@ int main()
     {
         cout << "Permutations of " << letters << endl;
         letters_tmp = letters;
-        sort(letters.begin(), letters.end()); // 初始化为第一种排序方式
+        sort(letters.begin(), letters.end()); // 按字母顺序排序
         cout << letters << endl;
         while (next_permutation(letters.begin(), letters.end())) // next_permutation()每次都就地排序，返回true或false
         {
