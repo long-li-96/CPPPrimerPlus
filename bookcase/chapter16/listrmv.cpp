@@ -27,13 +27,13 @@ int main() {
   cout << endl;
 
   list<int>::iterator last;
-  last = remove(lb.begin(), lb.end(), 4); // 删除lb中值为4的元素
+  last = remove(lb.begin(), lb.end(), 4); // 删除lb中值为4的元素，返回删除4的元素之后的超尾值迭代器（元素值非4），值非4的元素重新排在前面
   cout << "After using the remove() function:\n";
   cout << "lb: \t";
   for_each(lb.begin(), lb.end(), Show);
   cout << endl;
 
-  lb.erase(last, lb.end());
+  lb.erase(last, lb.end()); // 删除[last,end())的区间
   cout << "After using the erase() method:\n";
   cout << "lb: \t";
   for_each(lb.begin(), lb.end(), Show);
