@@ -203,3 +203,5 @@ algorithm: n 算法 /ˈælɡərɪðəm/
 frequency: n 频率 /ˈfriːkwənsi/
 extract: vt 提取 /ˈekstrækt , ɪkˈstrækt/
 predicate: vt 断言 /ˈpredɪkət , ˈpredɪkeɪt/
+premium: adj 优质的 /ˈpriːmiəm/
+billing: n 账单 /ˈbɪlɪŋ/

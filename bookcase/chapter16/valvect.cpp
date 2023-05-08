@@ -29,6 +29,9 @@ int main() {
   valarray<double> results(size);
   results = numbers + 2.0 * sq_rts;
 
+  //  valarray创建bool数组
+  valarray<bool> vbool = numbers > 9; // vbool[i]设置为numbers[i] > 9的bool值
+
   cout.setf(ios_base::fixed);
   cout.precision(4);
 
@@ -38,6 +41,14 @@ int main() {
     cout.width(8);
     cout << results[i] << endl;
   }
+
+  for (i = 0; i < size; i++) {
+    cout.width(8);
+    cout << numbers[i] << ": ";
+    cout.width(8);
+    cout << vbool[i] << endl;
+  }
+
   cout << "done\n";
   return 0;
 }

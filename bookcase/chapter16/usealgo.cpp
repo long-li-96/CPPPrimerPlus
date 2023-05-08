@@ -1,6 +1,6 @@
 // using serveral STL elements
 // 使用STL组件
-//
+// 计算一个单词出现的次数，忽略大小写，用map存储单词和出现次数，用set存储单词，用vector存储输入的单词，最后以键值队输出 
 
 #include <algorithm>
 #include <cctype>
