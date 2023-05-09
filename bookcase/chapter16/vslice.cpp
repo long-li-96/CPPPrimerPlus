@@ -3,6 +3,8 @@
 // 使用slice对象可以将一维的valarray对象表示为二维数据
 // slice(index1, count, distance)
 // index1:起始索引，count:索引数,distacne:索引跨距
+
+// gslice类对象可以用作数组下标，gslice对象可以表示二维数组的三维数据
 #include <cstdlib>
 #include <iostream>
 #include <valarray>
@@ -36,7 +38,7 @@ int main() {
   cout << "Set first column to sum  of next two:\n";
   // + not defined for slices, so convert to valarray<int>
   valint[slice(0, 4, 3)] =
-      vint(valint[slice(1, 4, 3)]) + vint(valint[slice(2, 4, 3)]);  // 将valint的第一列元素赋值为第二列元素+第三列元素（一一对应的相加）
+      vint(valint[slice(1, 4, 3)]) + vint(valint[slice(2, 4, 3)]);  // 将valint的第一列元素赋值为第二列元素+第三列元素（一一对应的相加）,使用了slice对象的复制构造函数
   show(valint, 3);
 
   return 0;
