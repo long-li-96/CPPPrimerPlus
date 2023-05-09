@@ -1,4 +1,5 @@
 // using valarray slices from <valarray>
+// slice类对象可以用作数组下标，slice对象可以表示一维数组的二维数据
 // 使用slice对象可以将一维的valarray对象表示为二维数据
 // slice(index1, count, distance)
 // index1:起始索引，count:索引数,distacne:索引跨距
@@ -20,7 +21,7 @@ int main() {
   cout << "Original array:\n";
   show(valint, 3);  // show in 3 columns
 
-  vint vcol(valint[slice(1, 4, 3)]);  // extract 2nd column  vcol被复制构造为valint的第二列
+  vint vcol(valint[slice(1, 4, 3)]);  // extract 2nd column  vcol被复制构造为valint的第二列，slice(1,4,3)表示从valint的第二个元素开始，每隔3个元素取一个，取4个元素
   cout << "Second column:\n";
   show(vcol, 1);
 
@@ -49,7 +50,7 @@ void show(const vint &v, int cols) {
   for (int i = 0; i < lim; ++i) {
     cout.width(3);
     cout << v[i];
-    if (i % cols == cols - 1) // i除cols取余如果为cols-1就换行，相当于每行cols个元素
+    if (i % cols == cols - 1) // i除cols取余如果为cols-1就换行，相当于每行cols个元素，i是从0开始的
       cout << endl;
     else
       cout << " ";
