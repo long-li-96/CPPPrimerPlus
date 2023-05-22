@@ -123,7 +123,15 @@
         "algorithm": "cpp",
         "filesystem": "cpp",
         "typeindex": "cpp",
-        "list": "cpp"
+        "list": "cpp",
+        "__tree": "cpp",
+        "__verbose_abort": "cpp",
+        "bit": "cpp",
+        "map": "cpp",
+        "regex": "cpp",
+        "set": "cpp",
+        "numeric": "cpp",
+        "random": "cpp"
     },
     // --------------------------------------------------------------------------------------
 }
