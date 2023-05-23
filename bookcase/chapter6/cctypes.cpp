@@ -33,3 +33,5 @@ int main()
          << others << " others.\n";
     return 0;
 }
+
+// cctype库常用函数

@@ -1,13 +1,15 @@
-// 简单判断回文数，不考虑字符、大小写
-// 使用字符串方法
+// 判断回文数，考虑大小写、空格、特殊字符
+// 使用STL函数
 #include <iostream>
 #include <string>
 #include <algorithm>
+#include <cctype>
+
 bool JudgePalindrome(std::string & str1) noexcept;
 
 int main()
 {
-    std::string str1 = "123121";
+    std::string str1 = "A123,321a";
     if (JudgePalindrome(str1))
         std::cout << "It's palindrome string!\n";
     else
