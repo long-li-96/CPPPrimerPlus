@@ -20,7 +20,7 @@ int main()
             whitespace ++;
         else if (isdigit(ch))
             digits ++;
-        else if (ispunct(ch))
+        else if (ispunct(ch)) // 检查是否标点符号
             punct ++;
         else 
             others ++;
@@ -35,3 +35,7 @@ int main()
 }
 
 // cctype库常用函数
+/*
+toupper();
+tolower();
+*/

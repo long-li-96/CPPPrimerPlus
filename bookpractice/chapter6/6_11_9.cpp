@@ -14,7 +14,7 @@ int main()
     double payment;
     cout << "Enter name of the file: " << endl;
     // 打开文件，读取文件
-    getline(cin, filename);
+    getline(cin, filename); // 输入文件名
     ifstream inFile;
     inFile.open(filename);
     if (!inFile.is_open())

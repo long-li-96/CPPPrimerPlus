@@ -206,3 +206,4 @@ predicate: vt 断言 /ˈpredɪkət , ˈpredɪkeɪt/
 premium: adj 优质的 /ˈpriːmiəm/
 billing: n 账单 /ˈbɪlɪŋ/
 omit: v 删除,遗漏 /əˈmɪt/
+expire: v 失效 /ɪkˈspaɪər/

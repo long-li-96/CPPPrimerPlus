@@ -9,7 +9,7 @@ bool JudgePalindrome(std::string & str1) noexcept;
 
 int main()
 {
-    std::string str1 = "A123,321a";
+    std::string str1 = "b123,321a";
     if (JudgePalindrome(str1))
         std::cout << "It's palindrome string!\n";
     else
@@ -19,10 +19,20 @@ int main()
 
 bool JudgePalindrome(std::string & str1) noexcept
 {
-    std::string str2 = str1;
-    std::reverse(str2.begin(), str2.end()); // 翻转字符串，就地算法返回void
-    if (str1 == str2)
+    std::string str2;
+    std::copy(str1.rbegin(),str1.rend(), str2.begin());
+    if (str2 == str1)
         return true;
-    return false;
+    for (std::string::reverse_iterator i = str1.rbegin(),j = str2.rbegin();i != str1.rend(); i++, j++) // c++17可以在一行代码里，连续定义相同类型的变量
+    {
+        if (isalpha(*i) && isalpha(*j))
+        {
+            if (tolower(*i) != tolower(*j))
+                return false;
+        }
+        else if (*i !=*j)
+            return false;
+    }
+    return true;
 }
 

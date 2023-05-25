@@ -19,13 +19,13 @@ int main()
         exit(EXIT_FAILURE);
     }
     inFile >> value;
-    while(inFile.good())
+    while(inFile.good()) // 读取正常？
     {
         ++count;
         cout << value;
         inFile >> value;
     }
-    if (inFile.eof())
+    if (inFile.eof()) // 判断文件结尾
         cout << endl <<"End of file reached.\n";
     if (count == 0)
         cout << "No data processed.\n";
