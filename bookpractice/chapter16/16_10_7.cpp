@@ -8,7 +8,7 @@
 #include <iostream>
 #include <vector>
 #include <ctime>
-#include <random>   // for 
+#include <random>   // for random_device mt19937 shuffle
 #include <iterator> // for ostream_iterator
 std::vector<int> Lotton(int num1, int num2);
 
@@ -31,8 +31,8 @@ std::vector<int> Lotton(int num1,int num2)
     }
 
     // 使用随机数引擎和std::shuffle()打乱矢量
-    std::random_device rd;
-    std::mt19937 g(rd());
+    std::random_device rd; // 生成种子
+    std::mt19937 g(rd()); // 随机数引擎
     std::shuffle(allValues.begin(), allValues.end(), g); // 就地随机排序
 
     // 选取打乱后矢量的前num2个值作为结果返回
@@ -54,8 +54,8 @@ std::vector<int> Lotton(int num1, int num2)
     // 创建静态整数分布函数
     static std::uniform_int_distribution<int> dist;
 
-    // 设置范围
-    dist.param(std::uniform_int_distribution<int>::param_type(0, num1+1)); // 左闭右闭
+    // 设置随机数范围
+    dist.param(std::uniform_int_distribution<int>::param_type(0, num1+1)); // 左闭右开
 
     // 创建指定元素数目的vector对象
     std::vector<int> nums(num2);
