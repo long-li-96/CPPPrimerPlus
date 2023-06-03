@@ -18,7 +18,7 @@
 #include <random> // for random_device mt19937 shuffle uniform_int_distribution
 #include <iomanip>
 
-const int  maxnum = 100000000;
+const int  maxnum = 10000000;
 
 // a 创建大型vector<int>对象vi0，并使用rand()给它提供初始值
 std::vector<int> createVi(int num);
