@@ -23,10 +23,11 @@ bool ratingThen(const shared_ptr<Review>& r1, const shared_ptr<Review>& r2);
 
 bool priceThen(const shared_ptr<Review>& r1, const shared_ptr<Review>& r2);
 
+void ShowReview(const shared_ptr<Review>& rr);
+
 // 结构对象的函数
 bool FillReview(Review& rr);
 
-void ShowReview(const shared_ptr<Review>& rr);
 
 int main() {
   using namespace std;
@@ -82,33 +83,40 @@ int main() {
 
 // 全排序 title > rating > price
 bool operator<(const shared_ptr<Review>& r1, const shared_ptr<Review>& r2) {
-  if (r1->title < r2->title)
-    return true;
-  else if (r1->title == r2->title && r1->rating < r2->rating)
-    return true;
-  else if (r1->title == r2->title && r1->rating == r2->rating &&
-           r1->price < r2->price)
-    return true;
-  else
-    return false;
+  // if (r1->title < r2->title)
+  //   return true;
+  // else if (r1->title == r2->title && r1->rating < r2->rating)
+  //   return true;
+  // else if (r1->title == r2->title && r1->rating == r2->rating &&
+  //          r1->price < r2->price)
+  //   return true;
+  // else
+  //   return false;
+
+  // 优化后的代码
+  if (r1->title != r2->title)
+    return r1->title < r2->title;
+  else if (r1->rating != r2->rating)
+    return r1->rating < r2->rating;
+  else 
+    return r1->price < r2->price;
 }
+
+
 
 // title的完整弱排序
 bool titleThen(const shared_ptr<Review>& r1, const shared_ptr<Review>& r2) {
-  if (r1->title < r2->title) return false;
-  return true;
+  return r1->title < r2->title;
 }
 
 // rating的完整弱排序
 bool ratingThen(const shared_ptr<Review>& r1, const shared_ptr<Review>& r2) {
-  if (r1->rating < r2->rating) return false;
-  return true;
+  return r1->rating < r2->rating;
 }
 
 // price的完整弱排序
 bool priceThen(const shared_ptr<Review>& r1, const shared_ptr<Review>& r2) {
-  if (r1->price < r2->price) return false;
-  return true;
+  return r1->price < r2->price;
 }
 
 bool FillReview(Review& rr) {
@@ -130,5 +138,7 @@ bool FillReview(Review& rr) {
 
 void ShowReview(const shared_ptr<Review>& rr) {
   std::cout << rr->rating << "\t" << rr->title << "\t" << rr->price
-            << std::endl;
+            << "\n";
 }
+
+// std::endl，它会刷新输出缓冲区，可能会降低性能。建议使用换行符 '\n' 代替，除非特别需要刷新缓冲区。
