@@ -208,3 +208,6 @@ billing: n 账单 /ˈbɪlɪŋ/
 omit: v 删除,遗漏 /əˈmɪt/
 expire: v 失效 /ɪkˈspaɪər/
 optimize：v 优化 /ˈɑːptɪmaɪz/
+manipulator: n 操作者 /məˈnɪpjuleɪtər/
+octal：adj 八进制
+hexadecimal: adj 十六进制 /ˌheksəˈdesɪml/
