@@ -211,3 +211,4 @@ optimize：v 优化 /ˈɑːptɪmaɪz/
 manipulator: n 操作者 /məˈnɪpjuleɪtər/
 octal：adj 八进制
 hexadecimal: adj 十六进制 /ˌheksəˈdesɪml/
+precise: adj 精确的 /prɪˈsaɪs/

@@ -1,5 +1,6 @@
 // using format manipulators
 // 设置显示整数时使用的计数系统，控制符
+// 设置输出的进制
 #include <iostream>
 int main()
 {
