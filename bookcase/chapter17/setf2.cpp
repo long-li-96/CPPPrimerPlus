@@ -45,8 +45,8 @@ int main()
 
     // use right justification, fixed notation 定点模式
     // 精度为3，在定点模式下显示小数3位
-    cout.setf(ios_base::right, ios_base::adjustfield);
-    cout.setf(ios_base::fixed, ios_base::floatfield);
+    cout.setf(ios_base::right, ios_base::adjustfield); // 右对齐
+    cout.setf(ios_base::fixed, ios_base::floatfield); // 设置浮点数定点显示
     cout << "Right Justification:\n";
     for (n = 1; n <= 41; n +=10)
     {
