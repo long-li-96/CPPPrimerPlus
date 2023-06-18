@@ -21,7 +21,7 @@ int main()
 
     // display infomation on screen with cout
 
-    cout << fixed;
+    cout << fixed; // 使用fixed控制符，导致显示末尾的0
     cout.precision(2); // 设置精确度为2
     cout.setf(ios_base::showpoint); // 显示浮点数小数点后的零
     cout << "Make and model: " << automobile << endl;
