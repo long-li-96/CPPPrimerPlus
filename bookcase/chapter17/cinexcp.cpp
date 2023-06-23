@@ -12,12 +12,12 @@ int main()
     int input;
     try
     {
-        while(cin >> input) // cin异常输入触发clear()
+        while(cin >> input) // cin异常输入触发clear(),流状态良好才返回true即所有位被清除
         {
             sum+=input;
         }
     }
-    catch(ios_base::failure & bf)
+    catch(ios_base::failure & bf) // 异常对象已经生成
     {
         std::cerr << bf.what() << endl;
         cout << "O! the horror!\n";
