@@ -189,7 +189,7 @@ superb: adj 极好的 [suːˈpɜːrb]
 identification: n 识别 [aɪˌdentɪfɪˈkeɪʃn]
 subscription: n 订阅 /səbˈskrɪpʃn/
 lottery: n 彩票 /ˈlɑːtəri/
-truncate: vt 截断 /ˈtrʌŋkeɪt/
+truncate: vt&adj 截断 /ˈtrʌŋkeɪt/
 elephant: n 象 /ˈɛləfənt/
 vector: n 矢量 /ˈvektər/
 iterator: n 迭代器 /ɪtə'retɚ/
