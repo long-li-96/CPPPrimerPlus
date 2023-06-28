@@ -28,7 +28,7 @@ int main()
     if (!fout.is_open())
     {
         cerr << "Can't open " << file << " file for output.\n";
-        exit(EXIT_FAILURE);
+        exit(EXIT_FAILURE); // 打开文件失败，退出程序
     }
     cout << "Enter guest names (enter a blank line to quit):\n";
     string name;
@@ -43,7 +43,7 @@ int main()
     {
         cout << "Here are the new contents of the "
              << file << " file:\n";
-        while (fin.get(ch))
+        while (fin.get(ch)) // 从文件中读取单个字符给到程序中ch变量
             cout << ch;
         fin.close();
     }

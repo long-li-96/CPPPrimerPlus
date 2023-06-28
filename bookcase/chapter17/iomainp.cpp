@@ -8,10 +8,10 @@ int main()
 {
     using namespace std;
     // use new standard manipulators
-    cout << fixed << right; // 使用fixed控制符，导致显示末尾的0
+    cout << fixed << right; // 使用fixed控制符,显示末尾的0
 
     // use iomanip manipulators
-    cout << setw(6) << "N" << setw(14) << "squre root" // setw()控制符用来设置字段款的
+    cout << setw(6) << "N" << setw(14) << "squre root" // setw()控制符用来设置字段宽度的
          << setw(15) << "fourth root\n";
 
     double root;

@@ -16,7 +16,7 @@
 #include <vector>
 #include <list>
 #include <random> // for random_device mt19937 shuffle uniform_int_distribution
-#include <iomanip>
+#include <iomanip> // io manipulator
 
 const int  maxnum = 10000000;
 
