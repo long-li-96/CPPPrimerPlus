@@ -25,7 +25,7 @@ int main()
 
     // show initial contents
     ifstream fin;
-    fin.open(file, ios_base::in | ios_base::binary); // binary file
+    fin.open(file, ios_base::in | ios_base::binary); // binary file 以二进制读模式连接到文件，这个文件是二进制文件
     // NOTE: some systems don't accept the ios_base::binary mode
     if (fin.is_open())
     {
@@ -64,11 +64,11 @@ int main()
         cout << "Enter planet name (enter a blank line to quit): \n";
         cin.get(pl.name, 20); // 碰到换行符终止循环
     }
-    fout.close();
+    fout.close(); // 关闭fout与文件的连接
 
     // show revised file
     fin.clear(); // not required for some implementations, but won't hurt
-    fin.open(file, ios_base::in | ios_base::binary);
+    fin.open(file, ios_base::in | ios_base::binary); // 以二进制读模式连接到文件，这个文件是二进制文件
     if (fin.is_open())
     {
         cout << "Here are the new contents of the "
