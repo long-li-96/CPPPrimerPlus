@@ -62,7 +62,7 @@ int main()
         eatline();
         fout.write((char *) &pl, sizeof pl); // 将pl个字符复制到文件中（二进制）
         cout << "Enter planet name (enter a blank line to quit): \n";
-        cin.get(pl.name, 20);
+        cin.get(pl.name, 20); // 碰到换行符终止循环
     }
     fout.close();
 

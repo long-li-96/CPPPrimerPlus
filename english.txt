@@ -214,3 +214,5 @@ hexadecimal: adj 十六进制 /ˌheksəˈdesɪml/
 precise: adj 精确的 /prɪˈsaɪs/
 phase: n 阶段 /feɪz/
 discard: v&n 丢弃 /dɪˈskɑːrd , ˈdɪskɑːrd/
+trigger: vt&n 触发 /ˈtrɪɡər/
+duplicate: vt&n 复制 /ˈduːplɪkət/
