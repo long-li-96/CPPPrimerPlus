@@ -15,7 +15,7 @@ struct planet
 
 };
 
-const char * file = "planets.dat";
+const char * file = "planet.dat";
 
 int main()
 {
@@ -23,9 +23,11 @@ int main()
     planet pl;
     cout << fixed << right; // 使用fixed控制符,显示末尾的0，right右对齐
 
+    
+
     // show initial contents
-    ifstream fin;
-    fin.open(file, ios_base::in | ios_base::binary); // binary file 以二进制读模式连接到文件，这个文件是二进制文件
+    ifstream fin; // 创建输入流对象
+    fin.open(file, ios_base::in | ios_base::binary); // binary file 将输入流对象以二进制读模式连接到文件，这个文件是二进制文件
     // NOTE: some systems don't accept the ios_base::binary mode
     if (fin.is_open())
     {
@@ -42,7 +44,7 @@ int main()
 
     // add new data
     ofstream fout(file, 
-    ios_base::out | ios_base::app | ios_base::binary);
+    ios_base::out | ios_base::app | ios_base::binary); // 如果文件不存在则创建文件并以二进制追加写的模式打开这个文件
     // NOTE: some systems don't accept the ios_base::binary mode
     if (!fout.is_open())
     {

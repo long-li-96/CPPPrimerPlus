@@ -30,7 +30,7 @@ int main()
     // 而如果是istream、ostrteam对象，输入、输出指针将彼此独立
     fstream finout; // read and write streams
     finout.open(file, 
-            ios_base::in | ios_base::out | ios_base::binary);
+            ios_base::out | ios_base::in | ios_base::binary); // 如果文件不存在，则会报错文件无法打开，这个类的读写模式不会去新建文件
     // NOTE: Some Unix systems require omitting | ios::binary
     int ct = 0;
     if (finout.is_open())

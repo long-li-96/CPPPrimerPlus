@@ -16,9 +16,9 @@ int main()
     int cap; // 随机值
     // write formatted information to string stream
     outstr << "The hard disk " << hdisk << " has a capacity of " 
-           << cap << " gigabytes.\n"; // 不会在终端打印，这是程序向缓冲区中写入格式化内容
+           << cap << " gigabytes.\n"; // 不会在终端打印，这是程序向缓冲区中写入格式化内容，outstr使用动态内存分配来增大缓冲区
     string result = outstr.str(); // save result 返回一个被初始化为缓冲区内容的字符串对象,该对象被“冻结”不能将信息写入该对象中
-    cout << result; // show contents
+    cout << result; // show contents 使用ostream方法在终端输出缓冲区内容的字符串对象
 
     return 0;
 }
