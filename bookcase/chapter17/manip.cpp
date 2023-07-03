@@ -20,7 +20,7 @@ int main()
     cout << oct << n << " " << n * n << " (octal)\n"; // 八进制
 
     // alternative way to call a manipulator
-    dec(cout); // 十进制
+    dec(cout); // 十进制，等于cout << dec，因为ostream有重载<<运算符
     cout << n << " " << n * n << " (decimal)\n";
     return 0;
 }

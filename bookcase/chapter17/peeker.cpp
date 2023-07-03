@@ -10,7 +10,7 @@ int main()
     // read and echo input up to a # character
     char ch;
 
-    while (cin.get(ch)) // terminate on EOF 从键盘膜你文件尾将终止循环
+    while (cin.get(ch)) // terminate on EOF 从键盘模拟文件尾将终止循环
     {
         if (ch != '#')
             cout << ch;
