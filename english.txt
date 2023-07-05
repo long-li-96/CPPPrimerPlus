@@ -216,3 +216,4 @@ phase: n 阶段 /feɪz/
 discard: v&n 丢弃 /dɪˈskɑːrd , ˈdɪskɑːrd/
 trigger: vt&n 触发 /ˈtrɪɡər/
 duplicate: vt&n 复制 /ˈduːplɪkət/
+talent: n 人才；天赋 /ˈtælənt/
