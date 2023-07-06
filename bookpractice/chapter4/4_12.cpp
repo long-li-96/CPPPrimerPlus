@@ -95,7 +95,7 @@ cin >> address;
 取一个单词，而不是正行。
 
 17、声明一个vector对象和array对象，他们都将包含10个string对象，指出所需的头文件
-，单不要使用using。使用const来指定要包含的string对象数。
+，但不要使用using。使用const来指定要包含的string对象数。
 #include <string>
 #include <vector>
 #include <array>

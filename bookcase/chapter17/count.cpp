@@ -1,5 +1,5 @@
 // counting characters in a list of files
-// 计算命令行列出的文件包含的字符数
+// 计算命令行列出的可能多个文件包含的字符数
 // count.out file1 file2 
 #include <iostream>
 #include <fstream>
