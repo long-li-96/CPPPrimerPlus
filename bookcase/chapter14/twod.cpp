@@ -38,3 +38,7 @@ int main(void)
     cout << "Done\n";
     return 0;
 }
+/*
+生成4个模板：ArrayTP<int, 10> ArrayTP<double, 10> ArrayTP< ArrayTP<int, 5>, 10> 
+ArrayTP<int, 5>
+*/

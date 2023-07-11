@@ -68,7 +68,7 @@ int main()
         cerr << "Invalid record number -- bye\n";
         exit(EXIT_FAILURE);
     }
-    // 将整型转换为streamops对象
+    // 将整型转换为streamops对象：文件指针
     streampos place = rec * sizeof pl; // convert to streamops type
     finout.seekg(place); // random access 输入指针向前移动place
     if (finout.fail())
