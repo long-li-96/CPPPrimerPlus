@@ -2,7 +2,6 @@
 #include <iostream>
 #include <fstream>
 #include <cstdlib>
-inline void eatline() {while (std::cin.get() != '\n') continue;}
 
 int main(int argc, char * argv[])
 {
