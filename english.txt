@@ -219,3 +219,7 @@ duplicate: vt&n 复制 /ˈduːplɪkət/
 talent: n 人才；天赋 /ˈtælənt/
 dynamic: adj 动态的
 relay: vt 转发 /ˈriːleɪ/
+simantics: n 含义，语义 /sɪˈmæntɪks/
+interface: n 接口 /ˈɪntərfeɪs/
+steal: vt 窃取 /stiːl/
+application: n 应用 /ˌæplɪˈkeɪʃn/
