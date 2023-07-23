@@ -71,7 +71,7 @@ subdivide: 再分
 estimate: v估算[ˈestɪmət] n  [ˈestɪmeɪt]
 various:各种各样的[ˈveriəs] 
 notations: 符号  [noʊˈteɪʃənz] 
-signature: 签名[ˈsɪɡnətʃər]
+signature: n 签名, 特征[ˈsɪɡnətʃər]
 deduction:推理 [dɪˈdʌkʃn]
 deprecated:已弃用[ˈdeprəkeɪtɪd]
 represent：代表[ˌreprɪˈzent] 
