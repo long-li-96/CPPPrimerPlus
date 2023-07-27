@@ -223,3 +223,4 @@ simantics: n 含义，语义 /sɪˈmæntɪks/
 interface: n 接口 /ˈɪntərfeɪs/
 steal: vt 窃取 /stiːl/
 application: n 应用 /ˌæplɪˈkeɪʃn/
+evolution: n 发展 /ˌiːvəˈluːʃn/

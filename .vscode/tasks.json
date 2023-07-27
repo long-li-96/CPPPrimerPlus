@@ -25,7 +25,8 @@
                 "-Wall",
                 "-g",
                 "-std=c++17",
-                "-I/opt/homebrew/opt/boost/include", // Boost 头文件路径
+                // -I 指定头文件的路径 -L 指定库文件的路径
+                "-I/opt/homebrew/opt/boost/include", // Boost 头文件路径 
                 "-L/opt/homebrew/opt/boost/lib" // 修改为你的 Boost 库文件路径
             ],
             // Defines to which execution group this task belongs to.
