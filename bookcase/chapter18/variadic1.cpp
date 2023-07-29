@@ -12,7 +12,7 @@ template <typename T, typename... Args> // Args是一个模板类型列表
 void show_list3(T value, Args... args) // args是一个函数参数列表 ...放函数参数包名的右边表示将参数包展开
 {
     std::cout << value << ", ";
-    show_list3(args...); // args...的第一个参数又被赋给value，其他剩余的又赋给args,每次调用减少一项，直到匹配show_list3(void)结束递归
+    show_list3(args...); // args...的第一个参数被赋给value，其他剩余的又赋给args,每次调用减少一项，直到匹配show_list3(void)结束递归
 }
 
 int main()
