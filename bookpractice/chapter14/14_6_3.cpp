@@ -6,7 +6,8 @@ private:
     char fab[20];
 
 public:
-    Frabjous(const char  * s = "C++") : fab(s) {}
+    Frabjous() {}
+    Frabjous(char  * s = "C++") {std::strcpy(s, fab);}
     virtual void tell() {cout << fab;}
 };
 
