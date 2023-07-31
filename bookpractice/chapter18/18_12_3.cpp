@@ -14,8 +14,8 @@ long double sum_value(const T & value)
 template<typename T, typename... Args>
 long double sum_value(const T & value, const Args & ... args)
 {
-    // return sum_value(value) + sum_value(args...); // 这会导致只有一个参数的时候无限递归
-    return (long double) (value) + sum_value(args...);
+    return sum_value(value) + sum_value(args...);
+    // return (long double) (value) + sum_value(args...);
 }
 
 int main()
