@@ -15,14 +15,12 @@ template<typename T, typename... Args>
 long double sum_value(const T & value, const Args & ... args)
 {
     return sum_value(value) + sum_value(args...);
-    // return (long double) (value) + sum_value(args...);
 }
 
 int main()
 {
     int n = 14;
     double x = 2.71828;
-    // std::string mr = "Mr. String object!";
     std::cout << sum_value(n) << '\n';
     std::cout << sum_value(n, x) << '\n';
     std::cout << sum_value(x * x, x/n, 7 , 10.0, '!') << '\n';
