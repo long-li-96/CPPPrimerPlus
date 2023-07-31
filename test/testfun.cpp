@@ -3,6 +3,7 @@
 struct Values {
     int firstarg;
     int secondarg;
+    // Values * value;
 };
 
 Values getValues() {
