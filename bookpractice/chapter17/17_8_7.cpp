@@ -58,3 +58,5 @@ class Store
     public:
         Store(std::ofstream & fout) : os(fout) {}
 };
+
+// c++文件后缀名需要是cpp

@@ -13,6 +13,8 @@ T average_list(std::initializer_list<T> Tlist) // initializer_list 不定长常�
     T total = 0;
     for (auto p = Tlist.begin(); p != Tlist.end(); p++) // Tlist.begin() 是指向Tlist第一个元素的迭代器，类型是const T *
         total += *p;
+    // 使用for_each()也可实现
+    // std::for_each(Tlist.begin(), Tlist.end(), [&total](T t){total += t;});
     return total / Tlist.size(); 
 }
 

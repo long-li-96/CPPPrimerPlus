@@ -7,28 +7,62 @@ using namespace std;
 
 int main(void)
 {
-    employee em("Trip", "Harris", "Thumper");
-    cout << em << endl;
-    em.ShowAll();
-    manager ma("Amorphia", "Spindragon", "Nuancer", 5);
-    cout << ma << endl;
-    ma.ShowAll();
+    // employee em("Trip", "Harris", "Thumper");
+    // cout << em << endl;
+    // em.ShowAll();
+    // manager ma("Amorphia", "Spindragon", "Nuancer", 5);
+    // cout << ma << endl;
+    // ma.ShowAll();
 
-    fink fi("Matt", "Oggs", "Oiler", "Juno Barr");
-    cout << fi << endl;
-    fi.ShowAll();
-    highfink hf(ma, "Curly Kew"); // recruitment?
-    hf.ShowAll();
-    cout << "Press a key for next phase: \n";
-    // cin.get();
-    highfink hf2;
-    hf2.SetAll();
+    // fink fi("Matt", "Oggs", "Oiler", "Juno Barr");
+    // cout << fi << endl;
+    // fi.ShowAll();
+    // highfink hf(ma, "Curly Kew"); // recruitment?
+    // hf.ShowAll();
+    // cout << "Press a key for next phase: \n";
+    // // cin.get();
+    // highfink hf2;
+    // hf2.SetAll();
 
-    cout << "Using an abstr_emp * pointer:\n";
-    abstr_emp * tri[4] = {&em, &fi, &hf, &hf2};
+    // cout << "Using an abstr_emp * pointer:\n";
+    // abstr_emp * tri[4] = {&em, &fi, &hf, &hf2};
+    // for (int i = 0; i < 4; i ++)
+    //     tri[i]->ShowAll();
+
+    abstr_emp * tri[4];
     for (int i = 0; i < 4; i ++)
-        tri[i]->ShowAll();
-    
+    {
+        switch (i)
+        {
+        case 0:
+            tri[i] = new employee;
+            tri[i]->SetAll();
+            tri[i]->ShowAll();
+            cout << & (tri[i]) << endl;
+            break;
+        case 1:
+            tri[i] = new manager;
+            tri[i]->SetAll();
+            tri[i]->ShowAll();
+            cout << & (tri[i]) << endl;
+            break;
+        case 2:
+            tri[i] = new fink;
+            tri[i]->SetAll();
+            tri[i]->ShowAll();
+            cout << & (tri[i]) << endl;
+            break;
+        case 3:
+            tri[i] = new highfink;
+            tri[i]->SetAll();
+            tri[i]->ShowAll();
+            cout << & (tri[i]) << endl;
+            break;
+        default:
+            break;
+        }
+    }
+
     return 0;
 }
 
