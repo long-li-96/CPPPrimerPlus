@@ -286,8 +286,8 @@ highfink::highfink(const highfink &h) : abstr_emp(h), manager(h), fink(h) {}
 
 void highfink::ShowAll() const {
   abstr_emp::ShowAll();
-  std::cout << manager::InChargeOf() << std::endl;
-  std::cout << fink::ReportsTo() << std::endl;
+  std::cout << "InChargeof:" << manager::InChargeOf() << std::endl;
+  std::cout << "reportsto" << fink::ReportsTo() << std::endl;
 }
 
 void highfink::SetAll() {

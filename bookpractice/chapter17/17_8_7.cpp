@@ -17,8 +17,26 @@ os.write(s.data(), len); // store characters
 #include <vector>
 #include <fstream>
 #include <string>
+#include <algorithm> // for for_each()
 void ShowStr(const std::string &);
-class Store;
+class Store; // 类前向声明不能在定义之前，使用类成员方法
+class Store
+{
+    private:
+        std::ofstream & os;   // 输出文件流对象不可复制，也不可赋值，但可以被引用
+    public:
+        Store(std::ofstream & fout):os(fout) {}
+        void operator() (const std::string & s)
+        {
+            if (s[0] != '\0')
+            {
+                int len = s.length();
+                os.write((char *) &len, sizeof(std::size_t)); // store length
+                os.write(s.data(), len); // store characters
+            }
+        }
+};
+void GetStrs(std::ifstream & fin, std::vector<std::string> & vistr);
 int main()
 {
     using namespace std;
@@ -39,7 +57,7 @@ int main()
 
     // recover file contents
     vector<string> vistr;
-    ifstream fin("srings.dat", ios_base::in | ios_base::binary);
+    ifstream fin("strings.dat", ios_base::in | ios_base::binary);
     if (!fin.is_open())
     {
         cerr << "Could not open file for input.\n";
@@ -51,12 +69,22 @@ int main()
 
     return 0;
 }
-class Store
-{
-    private:
-        std::ofstream os;
-    public:
-        Store(std::ofstream & fout) : os(fout) {}
-};
 
+void GetStrs(std::ifstream & fin, std::vector<std::string> & vistr)
+{
+    int len;
+    while (fin.read((char *) &len, sizeof(std::size_t)))
+    {
+        std::string tempstr;
+        // 为tempstr分配足够的空间
+        tempstr.resize(len); // 当创建一个空的std::string并尝试读取数据到它的data()时，实际上是在写入未分配的内存，这会导致未定义的行为
+        fin.read(tempstr.data(), len);
+        vistr.push_back(tempstr);
+    }
+}
+
+void ShowStr(const std::string & s)
+{
+    std::cout << s << '\n';
+}
 // c++文件后缀名需要是cpp

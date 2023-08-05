@@ -62,7 +62,8 @@ int main()
         cout << "Enter planet's acceleration of gravity: ";
         cin >> pl.g;
         eatline();
-        fout.write((char *) &pl, sizeof pl); // 将pl个字符复制到文件中（二进制）
+        // 将&pl转化为字符指针，write要求第一个参数为字符指针，第二个参数为要写入的字节数
+        fout.write((char *) &pl, sizeof pl); // 将pl作为一个整体存入文件中,将
         cout << "Enter planet name (enter a blank line to quit): \n";
         cin.get(pl.name, 20); // 碰到换行符终止循环
     }
