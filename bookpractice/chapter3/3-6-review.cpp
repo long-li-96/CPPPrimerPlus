@@ -74,7 +74,9 @@ e、auto fract = 8.25f/2.5; // double 2.5不加f就是double，最后值取最�
 int至少和short一样长
 long至少32位，且至少与int一样长
 long long至少64位，且至少与long一样长
+*/
 
+/*
 运算符优先级：
 1、L-R
 :: 作用域解析
@@ -116,4 +118,19 @@ sizeof 长度     new 动态内存分配    new[] 动态分配数组  delete 动
 throw 引发异常
 18、L-R
 , 将两个表达式合并成一个
+*/
+
+/*
+基础数据类型
+#include <climits> 
+定义了符号常量来表示类型的限制,char、整型的最大值、最小值、位数等
+
+
+1、整型
+short 至少16位
+int至少与short一样长
+long至少32位，且至少与int一样长
+long long至少64位，且至少与long一样长
+
+2、
 */
