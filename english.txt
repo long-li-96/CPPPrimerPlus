@@ -9,7 +9,7 @@ confusion:混乱
 operator:操作
 logical:逻辑的
 trash:毁坏
-instruction:命令
+instruction: n 命令 /ɪnˈstrʌkʃn/
 anyway:不管怎样
 awareness:意识
 quotient:商
@@ -225,3 +225,4 @@ steal: vt 窃取 /stiːl/
 application: n 应用 /ˌæplɪˈkeɪʃn/
 evolution: n 发展 /ˌiːvəˈluːʃn/
 segmentation: n 分段 /ˌseɡmenˈteɪʃn/
+detect: vt 发现 /dɪˈtekt/

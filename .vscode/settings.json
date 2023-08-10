@@ -134,7 +134,11 @@
         "numeric": "cpp",
         "random": "cpp",
         "queue": "cpp",
-        "climits": "cpp"
+        "climits": "cpp",
+        "thread": "cpp",
+        "future": "cpp",
+        "condition_variable": "cpp",
+        "strstream": "cpp"
     },
     // --------------------------------------------------------------------------------------
 }
