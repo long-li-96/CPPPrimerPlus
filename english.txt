@@ -224,4 +224,10 @@ interface: n 接口 /ˈɪntərfeɪs/
 steal: vt 窃取 /stiːl/
 application: n 应用 /ˌæplɪˈkeɪʃn/
 evolution: n 发展 /ˌiːvəˈluːʃn/
+<<<<<<< HEAD
 segmentation: n 分段 /ˌseɡmenˈteɪʃn/
+=======
+segmentation: n 分段 /ˌseɡmenˈteɪʃn/
+detect: vt 发现 /dɪˈtekt/
+initiator: n 发起者/ɪˈnɪʃieɪtər/
+>>>>>>> 4211aeb (cmake and multiprocess)
