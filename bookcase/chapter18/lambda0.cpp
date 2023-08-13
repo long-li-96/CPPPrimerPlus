@@ -61,3 +61,4 @@ int main()
     cout << "Count of numbers divisible by 13: " << count13 << '\n';
     return 0;
 }
+// 没有形参的lambda表达式()可以省略
