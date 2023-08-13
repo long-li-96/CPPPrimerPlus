@@ -168,45 +168,45 @@ auto ThreadPool::enqueue(F&& f, Args&&... args)
     return res;
 }
 
-int main() {
-    // 创建一个包含4个工作线程的线程池
-    ThreadPool pool(4);
-    /*
-    用于存储任务结果的句柄，这里交由到主线程来控制任务完成后的任意时间点获取任务结果，这允许主线程在等待结果的同时执行其他工作，控制获取任务结果的顺序，任务执行顺序还是由线程池调度策略控制，
-    */
-    std::vector<std::future<int>> results; 
+// int main() {
+//     // 创建一个包含4个工作线程的线程池
+//     ThreadPool pool(4);
+//     /*
+//     用于存储任务结果的句柄，这里交由到主线程来控制任务完成后的任意时间点获取任务结果，这允许主线程在等待结果的同时执行其他工作，控制获取任务结果的顺序，任务执行顺序还是由线程池调度策略控制，
+//     */
+//     std::vector<std::future<int>> results; 
 
-    // 将8个任务添加到线程池
-    for(int i = 0; i < 10; ++i) {
-        // 主线程存储任务结果句柄的vector插入线程池插入任务的方法返回的句柄
-        results.emplace_back(
-            // 线程池插入任务
-            pool.enqueue([i] {
-                std::cout << "Thread " << i << " is working." << std::endl;
-                /*
-                std::this_thread: 这是一个命名空间，提供了一组访问当前线程的函数
-                sleep_for用于阻塞当前线程指定的时间段
-                std::chrono::seconds(1): 这是一个时间段，表示1秒。std::chrono是一个命名空间，包括一组表示时间点、时间段和时钟的类和函数。std::chrono::seconds是一个时间段的类型，表示秒数。
-                */
-                std::this_thread::sleep_for(std::chrono::seconds(1)); // 当前线程暂停执行1秒
-                std::cout << "Thread " << i << " has finished." << std::endl;
-                return i * i;
-            })
-        );
-    }
+//     // 将8个任务添加到线程池
+//     for(int i = 0; i < 10; ++i) {
+//         // 主线程存储任务结果句柄的vector插入线程池插入任务的方法返回的句柄
+//         results.emplace_back(
+//             // 线程池插入任务
+//             pool.enqueue([i] {
+//                 std::cout << "Thread " << i << " is working." << std::endl;
+//                 /*
+//                 std::this_thread: 这是一个命名空间，提供了一组访问当前线程的函数
+//                 sleep_for用于阻塞当前线程指定的时间段
+//                 std::chrono::seconds(1): 这是一个时间段，表示1秒。std::chrono是一个命名空间，包括一组表示时间点、时间段和时钟的类和函数。std::chrono::seconds是一个时间段的类型，表示秒数。
+//                 */
+//                 std::this_thread::sleep_for(std::chrono::seconds(1)); // 当前线程暂停执行1秒
+//                 std::cout << "Thread " << i << " has finished." << std::endl;
+//                 return i * i;
+//             })
+//         );
+//     }
 
-    // 输出每个任务的结果
-    for(auto && result: results)
-    {
-        std::cout << result.get() << ' ';
-        std::cout << std::endl;
-    }
+//     // 输出每个任务的结果
+//     for(auto && result: results)
+//     {
+//         std::cout << result.get() << ' ';
+//         std::cout << std::endl;
+//     }
     
 
-    return 0;
-}
-/*
-//
+//     return 0;
+// }
+
+// 独立于线程池、任务队列之外的互斥锁变量，同一时间内只有一个线程能操作，实现方案是：每个被线程使用的方法定义一个智能锁(std::mutex)
 class ThreadSafeInt {
 private:
     int value;
@@ -240,10 +240,10 @@ int main() {
     }
 
     // 等待所有任务完成
-    std::this_thread::sleep_for(std::chrono::seconds(2));
+    std::this_thread::sleep_for(std::chrono::seconds(2)); // 当前线程等待2s
 
     std::cout << "Final value of sharedInt: " << sharedInt.get() << std::endl;  // 应该输出1000
 
     return 0;
 }
-*/
+

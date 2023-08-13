@@ -1,0 +1,91 @@
+///////////////////////////////// 基本编译
+1、多次执行时重复编译（文件没有修改）
+g++ -o main main.cpp hello/hello.cpp world/world.cpp -I ./world // -I 优先在目标文件夹找依赖的头文件
+
+2、每次单个编译文件，最后链接生成主程序,减少重复编译
+g++ -c main.cpp -I ./world
+g++ -c hello/hello.cpp
+g++ -c world/world.cpp
+g++ -o main main.o hello.o world.o
+
+
+/////////////////////make编译
+3、make工具编译，写Makefile然后make，make监测文件有没有变化 # make只能在类unix系统上使用
+# Makefile
+# 编译主程序所依赖的文件，命令
+main: main.o hello.o world.o
+		g++ -o main main.o hello.o world.o
+# 编译main.o所依赖的文件，命令
+main.o: main.cpp hello/hello.h world/world.h
+		g++ -c main.cpp -I world
+# 编译hello.o所依赖的文件，命令
+hello.o: hello/hello.cpp hello/hello.h
+		g++ -c hello/hello.cpp
+# 编译world.o所依赖的文件，命令
+world.o: world/world.cpp world/world.h
+		g++ -c world/world.cpp
+# 删掉编译的文件
+clean:
+		rm -rf main main.o hello.o world.o
+
+
+/////////////////////////CMAKE编译
+cmake解决项目跨平台编译 # cmake被设计用来连接本地构建环境,相当于转换成Makefile
+# 创建编译目录
+mkdir build
+cd build
+# 执行cmake生成makefile
+cmake ../ # 上级目录（CMakeLists.txt所在路径）生成makefile
+make
+# 返回源码目录
+cd ${OLDPWD}
+# 重新编译
+（1）删掉编译目录
+（2）make clean
+    make
+# 查看编译详细信息
+make VERBOSE=1
+
+5、简单cmake编译，直接在项目根目录下的文件中写所有模块的编译
+# 限制cmake最低版本
+cmake_minimum_required(VERSION 3.16.3)
+# 设置项目名
+project(hello_world)
+# 命令行，添加可执行程序main 后面是依赖
+add_executable(main main.cpp hello/hello.cpp world/world.cpp)
+# 给main（是target）添加头文件搜索路径
+target_include_directories(main PUBLIC world)
+
+6、每个模块下和项目根目录各自维护一个CMakeLists.txt
+/////////////////项目根目录/////////////
+
+cmake_minimum_required(VERSION 3.16.3)
+project(hello_world)
+
+# 添加子目录：进入hello目录，执行CMakeLists.txt
+add_subdirectory(hello)
+add_subdirectory(world)
+
+# 主程序只依赖main.cpp
+add_executable(main main.cpp)
+
+target_include_directories(main PUBLIC world)
+
+# 添加main需要链接的库
+target_link_libraries(main PUBLIC hellolib)
+target_link_libraries(main PUBLIC worldlib)
+
+///////////////模块目录/////////////////
+cmake_minimum_required(VERSION 3.16.3)
+project(hello)
+
+# 将${CMAKE_CURRENT_SOURCE_DIR}/hello.cpp设置为HELLO_SRC变量
+# ${CMAKE_CURRENT_SOURCE_DIR}为cmake内置变量，表示当前CMakeLists.txt所在的目录
+set(HELLO_SRC ${CMAKE_CURRENT_SOURCE_DIR}/hello.cpp)
+
+# 添加一个动态库hellolib
+# 将${HELLO_SRC}设置为hellolib库的源文件
+add_library(hellolib SHARED ${HELLO_SRC})
+
+
+
