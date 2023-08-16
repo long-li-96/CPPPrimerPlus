@@ -88,4 +88,47 @@ set(HELLO_SRC ${CMAKE_CURRENT_SOURCE_DIR}/hello.cpp)
 add_library(hellolib SHARED ${HELLO_SRC})
 
 
+///////////////引入第三方项目gtest/////////////
+（1）将第三方项目下载到项目中
+（2）将googletest添加到项目中
+（3）在项目目录的CMakeLists.txt中引入这个googletest
+	add_subdirectory(ThirdPart/googletest)
+（4）编译项目
+
+
+
+////////////gtest编写测试程序并运行////////////
+（1）项目根目录下的CMakeLists.txt
+	cmake_minimum_required(VERSION 3.16.3)
+	project(hello_world)
+	# 开启测试
+	enable_testing()
+	# 声明一个变量为项目的根路径
+	set(HELLO_WORLD_PROJECT_ROOT ${CMAKE_CURRENT_SOURCE_DIR})
+	add_subdirectory(hello)
+	add_subdirectory(world)
+	add_executable(${PROJECT_NAME} ${CMAKE_CURRENT_SOURCE_DIR}/main.cpp)
+	target_include_directories(${PROJECT_NAME} PUBLIC world)
+	target_link_libraries(${PROJECT_NAME} PUBLIC hellolib)
+	target_link_libraries(${PROJECT_NAME} PUBLIC worldlib)
+	# 引入测试用例目录
+	add_subdirectory(tests)
+(2)tests目录下的CMakeLists.txt
+	cmake_minimum_required(VERSION 3.16.3)
+	project(tests)
+	#将gtest 添加到项目中,googletest不是tests的子目录，所以需要指定编译路径
+	add_subdirectory(${HELLO_WORLD_PROJECT_ROOT}/ThirdPart/googletest googletest)
+	# 添加可执行程序
+	add_executable(test_hello ${CMAKE_CURRENT_SOURCE_DIR}/test_hello.cpp)
+	# 添加test_hello依赖的googletest头文件路径
+	target_include_directories(test_hello PUBLIC ${HELLO_WORLD_PROJECT_ROOT}/ThirdPart/googletest/include)
+	# 添加test_hello的头文件路径
+	target_include_directories(test_hello PUBLIC ${HELLO_WORLD_PROJECT_ROOT})
+	# 添加test_hello依赖的库:hellolib gtest gtest_main
+	target_link_libraries(test_hello PUBLIC hellolib gtest gtest_main)
+	# 将这个测试用例添加到ctest或make test
+	add_test(NAME test_hello
+			COMMAND test_hello)
+（3）make编译
+（4）ctest 或 make test
 
