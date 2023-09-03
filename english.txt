@@ -225,3 +225,4 @@ steal: vt 窃取 /stiːl/
 application: n 应用 /ˌæplɪˈkeɪʃn/
 evolution: n 发展 /ˌiːvəˈluːʃn/
 segmentation: n 分段 /ˌseɡmenˈteɪʃn/
+preserve: vt 保存 /prɪˈzɜːrv/

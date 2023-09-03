@@ -231,7 +231,7 @@ int main() {
     ThreadPool pool(4);  // 创建一个包含4个工作线程的线程池
     ThreadSafeInt sharedInt(0);  // 创建一个线程安全的整数，初始值为0
 
-    const int TASK_COUNT = 1000;  // 我们将创建1000个任务
+    const int TASK_COUNT = 1000;  // 将创建1000个任务
 
     for (int i = 0; i < TASK_COUNT; ++i) {
         pool.enqueue([&sharedInt]() {

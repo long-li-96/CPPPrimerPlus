@@ -30,5 +30,5 @@ add_executable(${PROJECT_NAME} ${CMAKE_CURRENT_SOURCE_DIR}/main.cpp)
 target_include_directories(${PROJECT_NAME} PUBLIC ${CMAKE_CURRENT_SOURCE_DIR}/world)
 target_link_libraries(${PROJECT_NAME} PUBLIC hellolib)
 target_link_libraries(${PROJECT_NAME} PUBLIC worldlib)
-# 引入测试用例目录
+# 引入子项目 测试用例目录
 add_subdirectory(tests)
