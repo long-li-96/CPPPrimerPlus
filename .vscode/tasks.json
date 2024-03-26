@@ -50,7 +50,7 @@
                 //   always: Always reveals the terminal when this task is executed.
                 //   silent: Only reveals the terminal if the task exits with an error or the problem matcher finds an error.(会显示错误，但不会显示警告)
                 //   never: Never reveals the terminal when this task is executed.
-                "reveal": "silent", // 控制在集成终端中是否显示。如果没问题那我不希望终端被切换、如果有问题我希望能看到编译过程哪里出错，所以选silent(可能always会好一些)
+                "reveal": "always", // 控制在集成终端中是否显示。如果没问题那我不希望终端被切换、如果有问题我希望能看到编译过程哪里出错，所以选silent(可能always会好一些)
                 // Controls whether the panel takes focus. Default is false.
                 "focus": false, // 我的理解是：是否将鼠标移过去。因为这个是编译任务，我们不需要输入什么东西，所以选false
                 // Controls if the panel is shared between tasks, dedicated to this task or a new one is created on every run.
